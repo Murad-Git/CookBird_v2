@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&family=PT+Sans&display=swap');
+@import url('./fonts/Chronicle\ Display\ Roman.otf');
+
+// PT Sans similar to Cera Pro
+
+html{
+    font-size: 10px;
+}
+// @include breakpoint(medium) {
+//     font-size: 56.25%;  // 1rem = 9px
+//   }
+ 
+//   @include breakpoint(small) {
+//     font-size: 50%;  // 1rem = 8px
+//   }
+body{
+    margin: 0;
+    padding: 0;
+    border:0;
+    height:100%;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    color: #6a6d75;
+}
+h1{
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+h2{
+    font-weight: 600;
+    line-height: 1.2;
+    color: #303236;
+}
+h4{
+    font-weight: 600;
+    line-height: 1.2;
+    color: #303236;
+}
+
+ol, ul{
+    list-style: none;
+}
+
+.header-main{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    // box-shadow: 0 0.1rem 0 rgb(0 0 0 / 8%);
+    border-bottom: solid 1px #e7e6eb;
+    max-height:3rem;
+    padding: 2.7rem 0;
+    // position: fixed;
+    // z-index: 7;
+    // left: 0;
+    // right: 0;
+    .logo{
+        display: block;
+        position: relative;
+        float: left;
+    }
+}
+// .logo{
+//     display: block;
+//     position: relative;
+//     float: left;
+// }
+// .icon-text{
+//     display:flex;
+//     align-items: center;
+// }
+.container-in{
+    margin-top: 3rem 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+
+}
+.nav-pills{
+    margin-left: 5rem;
+}
+.cookbird-page{
+    background-color: #ffff;
+}
+// .search-bar{
+//     background: #f7f7f7;
+//     padding:1rem 0;
+//     border-bottom: solid 1px #e7e6eb;
+// }
+
+// BEM
+.search-bar{
+    background: #f7f7f7;
+    padding:1rem 0;
+    border-bottom: solid 1px #e7e6eb;
+    &__icon{
+        display:flex;
+        align-items: center;
+    }
+}
+
+.search-input{
+    box-shadow:inset 0 2px 2px rgba(0, 0, 0,  0.15);
+    padding:0 1rem;
+    border-radius: 0.3rem;
+    width:100%;
+    height:4rem;
+    line-height: 4rem;
+    font-size: 1.5rem;
+    &::placeholder{
+        color: rgb(117, 117, 117);
+        line-height: inherit;
+        overflow-wrap: normal;
+
+    }
+}
+.btn{
+    border-radius:0.2rem;
+    font-size: 1.4rem;
+    // line-height: 4.7rem;
+    height:4.7rem;
+    padding:0 3.5rem;
+    display: inline-block;
+    text-decoration: none;
+    border: 0;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    background-color: #245091;
+    outline: 0;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+
+}
+.btn--full{
+    box-sizing: border-box;
+    width:100%;
+}
+.btn--small{
+    font-size: 1.4rem;
+    // line-height: 4.7rem;
+    height:3.85rem;
+    // padding: 0 3.5rem;
+    padding: 0;
+}
+.cookbird-title{
+    font-size: 2.4rem;
+    font: inherit;
+}
+.cookbird-href{
+    text-decoration: none;
+    color: #0f346c;
+}
+.container-in{
+    margin:3rem 0;
+}
+.cookbird-side-bar{
+    width:20%;
+}
+.accordion-group{
+    margin-bottom: 3rem;
+    padding-top: 1.5rem;
+    border-top: solid 1px #d3d5db;
+    & h2{
+        font-size: 1.6rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    & ul{
+        list-style: none;
+        padding-left: 0;
+        margin: 1rem 0;
+        & li{
+            color: #6a6d75;
+        }
+    } 
+}
+.accordion-inner{
+    & ul{
+        & li{
+            color: #6a6d75
+        }
+    }
+}
+.accordion-body{
+    padding: 0 0 0 1rem;
+}
+.toggler{
+    margin-right: 2rem;
+    border: none;
+    background: none;
+    color: #0f346c;
+}
+.recipe-row{
+    margin-bottom: 1.5rem;
+}
+.recipe-anchor{
+    text-decoration: none;
+    color: #0f346c;
+    & h3{
+        margin-bottom: 0.1rem;
+        font-family: inherit;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #303236;
+    }
+    &:hover{
+        color: inherit;
+    }
+}
+.recipe-img-link{
+    margin-bottom: 1rem;
+    position: relative;
+    & img{
+        // object-fit: cover;
+        max-width: 100%;
+        border: none;
+        &:hover{
+            outline: 2px solid #0f346c;
+            -moz-outline-radius: 25px;
+        }
+    }
+}
+.recipe-time-portion{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: flex-start;
+    & figure{
+        margin-right: 0.2rem;
+        width: 2rem;
+        height: auto;
+        & img{
+            object-fit: cover;
+            width: 1.8rem;
+            height: auto;
+        }
+    }
+    & p{
+        margin-right: 0.2rem;
+    }
+}
+
+.footer{
+    background-color: #fafbfc;
+    -webkit-box-shadow: inset 0 1px 0 0 #eceef2;
+    box-shadow: inset 0 1px 0 0 #eceef2;
+    color: #6a6d75;
+    overflow: hidden;
+
+}
+.footer-content{
+    display: flex;
+    justify-content:center;
+    padding-top: 30px;
+}
+.footer-contact{
+    color: #303236;
+    font-style: normal;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.socials{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding-top:1rem;
+    list-style: none;
+}
+.social{
+    font-size: 2rem;
+    cursor: pointer;
+    // color: #0f346c;
+    color: #6a6d75;
+}
+.footer-bottom{
+    height:auto;
+    line-height: 3.2rem;
+    padding:1rem 0;
+    margin-top: 3.2rem;
+    color: #fff;
+    background-color: #0f346c;
+}
+.back-top{
+    display:grid;
+    justify-content:end;
+    margin-right: 10rem;
+    // bottom:0;
+    // right:0;
+    // margin-right: 2rem;
+    margin-bottom: 4rem;
+    cursor: pointer;
+    z-index: 999;
+    // font-size: 1.2rem;
+    // font-weight: 500;
+    // text-align: center;
+    color: #6a6d75;
+}
+.btn-up{
+    font-size: 3rem;
+    margin: 0 auto 0.5rem auto;
+}
+////////////////////////////////// 
+// ABOUT PAGE
+/////////////////////////////////
+.body-wrap{
+    min-height: 100%;
+    // margin: 0 auto -35rem;
+}
+
+.owl-container{
+    overflow-x: hidden;
+    .cb-hero-image{
+        min-height: 0.1rem;
+    }
+}
+// MAIN RECIPE SECTION
+.section-recipe{
+    border-bottom: 1px solid #e4e6eb;
+}
+
+// Hero IMG
+.img-max{
+    width: 95%;
+}
+
+.cb-recipe-title{
+    margin-bottom: 1rem;
+        .cb-recipe-title__main{
+        font-size: 3rem;
+        font-weight: 600;
+        font-family: "Chronicle Ssm";
+        color: #002c9b;
+        margin-bottom: 1.2rem;
+    }
+    .cb-recipe-title__sub{
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: #6a6d75;
+        margin-bottom: 1.4rem;
+    }
+    // cooking time
+    .cb-recipe--details{
+        display: flex;
+        align-items: center;
+        .fa-clock{
+            font-size: 1.8rem;
+            color: #00a0df
+        }
+        .total-time{
+            margin-left: 0.8rem;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing:0.2rem;
+            color: #00a0df
+        }
+    }
+
+}
+
+// servings
+.recipe-display-servings{
+    margin-bottom: 2.5rem;
+    .cb-recipe-servings{
+        position: relative;
+        line-height: 1.4rem;
+        color: #6a6d75;
+    }
+}
+
+.recipe-main__description{
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    color: #595959;
+    &-title{
+        margin-bottom: 0.8rem;
+        font-size: 1.9rem;
+        line-height: 1.53;
+        color: #303236;
+    }
+    .description{
+        margin-bottom: 1.5rem;
+        & a{
+            color: inherit;
+        }
+    }
+}
+
+
+.nutrition-list{
+    margin-top: 4rem;
+    &--item{
+        display: flex;
+        align-items: baseline;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        line-height: 1.13;
+        color: #424242;
+        padding: 1.9rem 0;
+        border-bottom: 1px solid #e4e6eb;
+        &__heading{
+            padding:1.6rem 0;
+            .item-title{
+                font-weight: bold;
+                font-size: 1.9rem;
+                line-height: 1.53;
+                color: #303236
+            }
+            .item-value{
+                font-size: 1.4rem;
+                letter-spacing: 0.1rem;
+                line-height: 1.29;
+                color: #6a6d75;
+            }
+        }
+    }
+
+}
+.view-full-nutrition-container{
+    text-align: center;
+    .view-full-nutrition-link{
+        font-size: 1.4rem;
+        font-weight: bold;
+        line-height: 3.21;
+        letter-spacing:0.3rem;
+        color:#002c9b;
+        padding:0 2.4rem;
+        margin-top: 1.6rem;
+        cursor: pointer;
+        display: inline-block;
+        border-radius: 2.25rem;
+        text-transform: uppercase;
+        border: 1px solid #e4e6eb;
+    }
+}
+
+// INGREDIENTS SECTION
+.cb-section-title{
+    margin-bottom: 2.5rem;
+    &__super{
+        font-family: "Chronicle Ssm";
+        font-size: 2rem;
+        color: #6a6d75;
+        text-transform: lowercase;
+        margin-bottom: 0.6rem;
+    }
+    &__main{
+        font-weight: 700;
+        font-size: 3rem;
+        color: #0f346c;
+        letter-spacing:0.3rem;
+        text-transform: uppercase;
+    }
+}
+
+.rec-area-content{
+    min-height: 37.5rem;
+    position: relative;
+    .cb-feature-image{
+        position: relative;
+        &__hldr{
+            // max-width: 70rem;
+            .img-ingredients{
+                width:20%;
+                max-height: 40rem;
+                padding:1rem;
+            }
+        }
+    }
+    .cb-info-list__item{
+        color: #0f346c;
+        line-height: 2.5;
+        font-weight: 600;
+        font-size: 1.6rem;
+        .cb-info-list__amount{
+            font-family: "Chronicle Ssm";
+            font-weight: 500;
+            color: #6a6d75;
+            width: 23%;
+            display: inline-block;
+            text-align: right;
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+// INSTRUCTION SECTION
+.instruction__description{
+    margin: 3rem auto;
+    color: #303236;
+    font-size: 1.5rem;
+    line-height: 1.7;
+}
+
+
+// Media queries
+@media screen and (min-width: 962px){
+    // MAIN RECIPE SECTION
+    .section-recipe{
+        margin-top: 1.5rem;
+        padding-right: 0;
+        padding-left:0;
+        padding-bottom: 5.6rem;
+    }
+    .section-recipe.recipe-main{
+        margin-top: 2.5rem;
+        padding-bottom: 5.6rem;
+    }
+    .section-recipe .cb-hero-image{
+        margin-bottom: 3rem;
+
+    }
+
+    // INGREDIENTS SECTION
+    .non-story{
+        padding: 0.4rem 0;
+        color: #0f346c;
+    }
+}
