@@ -1,10 +1,13 @@
 // import async from 'regenerator-runtime';
 // import axios from 'axios';
 // const async = require('async');
-const axios = require('axios');
+// const axios = require('axios');
+import axios from 'axios';
 // import axios from '../../node_modules/axios/index.d.ts';
 
 // const key = config.API_KEY;
+// 1 API keys=8e77d79b100d4bde9448e79d8987c92d
+// 2 API keys=8dd25d27a6fb41f28a3a830fe78fae94
 
 // state
 const state = {
@@ -28,11 +31,12 @@ const createRecipeObject = function (recipe){
       cookingTime: data.readyInMinutes,
       servings: data.servings,
       originSourceUrl: data.sourceUrl,
-      sourceName: data.sourceName,
       cuisines: data.cuisines,
       dishTypes: data.dishTypes,
       instruction: data.instructions,
-      instructionsAnalize: data.analyzedInstruction.steps,
+      instructionsAnalize: data.analyzedInstructions[0]?data.analyzedInstructions[0]?.steps:'',
+      pricePerServings: data.pricePerServing,
+      healthScore: data.healthScore,
       summary: data.summary,
       ingredients: data.extendedIngredients,
       ingredientsImg: data.extendedIngredients.map(ing=>{
@@ -48,32 +52,149 @@ const createRecipeObject = function (recipe){
   
 // load and save full 1 recipe
 // id 723984
-exports.loadRecipe = async function(id){
+// exports.loadRecipe = async function(id){
+//     try {
+//         const request = await axios({
+//             method: "GET",
+//             url: `https://api.spoonacular.com/recipes/${id}/information?apiKey=8e77d79b100d4bde9448e79d8987c92d`,
+//         });
+//         // console.log(request.data);
+//         state.recipe = createRecipeObject(request);
+//         // console.log(JSON.stringify(state.recipe));
+//         // console.log(state.recipe.instructionsAnalize.map(steps=>{console.log(`step: ${steps.step} and number: ${steps.number}`);}));
+//         return state.recipe;
+//     } catch (error) {
+//         // console.error(error);
+//         throw error
+//     }
+// };
+// // loadRecipe(723984);
+
+// // Spoonacular API
+
+// // get random RECIPES
+// // get request example https://api.spoonacular.com/recipes/random?number=1&tags=vegetarian,dessert
+// exports.getRandomRecipes = async function(){
+//     try {
+//         const request = await axios({
+//             method: 'GET',
+//             url: `https://api.spoonacular.com/recipes/random?number=${state.search.resultsPerPage}&apiKey=8e77d79b100d4bde9448e79d8987c92d`
+//         });
+//         if(request.status == 200) console.log(`status: ${request.status}, data: ${request.data}`);
+
+//         // console.log(`random recipes: ${request.data.recipes.map(rec=>{console.log(rec);})}`);
+
+//         // // save results in state
+//         state.search.results = request.data.recipes.map(rec=>{
+//             return {
+//                 id : rec.id,
+//                 image : `https://spoonacular.com/recipeImages/${rec.id}-636x393.jpg`,
+//                 title : rec.title,
+//             }
+//         });
+//     } catch (error) {
+//         console.error(error);
+//         throw error
+//     }
+// };
+
+// exports.loadAllSearch = async function(query){
+//     try{
+//         state.search.query = query
+//         const request = await axios({
+//           method: "GET",
+//           url: `https://api.spoonacular.com/recipes/complexSearch?query=${query}&number=${state.search.resultsPerPage}&apiKey=8e77d79b100d4bde9448e79d8987c92d`,
+//         });
+
+//         // status check
+//         if(request.status == 200) console.log(`status: ${request.status}, data: ${request.data}`);
+//         // save total results
+//         state.search.totalResults = request.data.totalResults
+    
+//         // console.log(request.data.results);
+
+//         // save results in state
+//         state.search.results = request.data.results.map(rec=>{
+//           return {
+//             id : rec.id,
+//             image : `https://spoonacular.com/recipeImages/${rec.id}-636x393.jpg`,
+//             title : rec.title,
+//           }
+//         });
+//         // console.log(state.search.results);
+//         // console.log(`results saved: ${state.search.results.map(res=>res.title)}`);
+//       }
+//     catch (error){
+//       console.error(`${error} 💥💥💥💥`);
+//       throw err;
+//     }
+// }
+
+// exports.loadNutrition = async function(id){
+//   try {
+
+//         const request = await axios({
+//           method: "GET",
+//           url: `https://api.spoonacular.com/recipes/${id}/nutritionLabel?apiKey=8e77d79b100d4bde9448e79d8987c92d`,
+//       });
+
+//       // status check
+//       if(request.status == 200) console.log(`status: ${request.status}, data: ${request.data}`);
+//       return request;
+
+//   } catch (error) {
+//     console.error(`${error} 💥💥💥💥`);
+//     throw err;
+//   }
+// }
+
+
+
+// // send 10 results from total results list
+// exports.loadRenderResults = function(page = state.search.page){
+//     try {
+      
+//       state.search.page = page;
+//       const start = (page -1)*state.search.resultsPerPage; //0
+//       const end = page*state.search.resultsPerPage; //10
+//       // console.log(`results from model: ${state.search.results.map(rec=>{
+//       //   console.log(rec);
+//       // })}`);
+//       return state.search.results.slice(start, end);
+
+//     } catch (error) {
+//       console.error(error);
+//     }
+//   }
+
+// exports.dataState = state;
+export async function loadRecipe(id){
     try {
         const request = await axios({
             method: "GET",
-            url: `https://api.spoonacular.com/recipes/${id}/information?apiKey=8e77d79b100d4bde9448e79d8987c92d`,
+            url: `https://api.spoonacular.com/recipes/${id}/information?apiKey=8dd25d27a6fb41f28a3a830fe78fae94`,
         });
         // console.log(request.data);
         state.recipe = createRecipeObject(request);
         // console.log(JSON.stringify(state.recipe));
+        // console.log(state.recipe.instructionsAnalize.map(steps=>{console.log(`step: ${steps.step} and number: ${steps.number}`);}));
         return state.recipe;
     } catch (error) {
-        console.error(error);
+        // console.error(error);
         throw error
     }
-};
+}
 // loadRecipe(723984);
 
 // Spoonacular API
 
 // get random RECIPES
 // get request example https://api.spoonacular.com/recipes/random?number=1&tags=vegetarian,dessert
-exports.getRandomRecipes = async function(){
+export async function getRandomRecipes(){
     try {
         const request = await axios({
             method: 'GET',
-            url: `https://api.spoonacular.com/recipes/random?number=${state.search.resultsPerPage}&apiKey=8e77d79b100d4bde9448e79d8987c92d`
+            url: `https://api.spoonacular.com/recipes/random?number=${state.search.resultsPerPage}&apiKey=8dd25d27a6fb41f28a3a830fe78fae94`
         });
         if(request.status == 200) console.log(`status: ${request.status}, data: ${request.data}`);
 
@@ -91,14 +212,18 @@ exports.getRandomRecipes = async function(){
         console.error(error);
         throw error
     }
-};
+}
 
-exports.loadAllSearch = async function(query){
+export async function loadAllSearch(query){
     try{
         state.search.query = query
+        // const request = await axios({
+        //   method: "GET",
+        //   url: `https://api.spoonacular.com/recipes/complexSearch?diet=ketogenic&number=${state.search.resultsPerPage}&apiKey=8dd25d27a6fb41f28a3a830fe78fae94`,
+        // });
         const request = await axios({
           method: "GET",
-          url: `https://api.spoonacular.com/recipes/complexSearch?query=${query}&number=${state.search.resultsPerPage}&apiKey=8e77d79b100d4bde9448e79d8987c92d`,
+          url: `https://api.spoonacular.com/recipes/complexSearch?query=${query}&number=${state.search.resultsPerPage}&apiKey=8dd25d27a6fb41f28a3a830fe78fae94`,
         });
 
         // status check
@@ -106,7 +231,7 @@ exports.loadAllSearch = async function(query){
         // save total results
         state.search.totalResults = request.data.totalResults
     
-        // console.log(request.data.results);
+        console.log(request.data.results);
 
         // save results in state
         state.search.results = request.data.results.map(rec=>{
@@ -124,6 +249,46 @@ exports.loadAllSearch = async function(query){
       throw err;
     }
 }
+
+export async function loadNutrition(id){
+  try {
+
+        const request = await axios({
+          method: "GET",
+          url: `https://api.spoonacular.com/recipes/${id}/nutritionLabel?apiKey=8dd25d27a6fb41f28a3a830fe78fae94`,
+      });
+
+      // status check
+      if(request.status == 200) console.log(`status: ${request.status}, data: ${request.data}`);
+      return request;
+
+  } catch (error) {
+    console.error(`${error} 💥💥💥💥`);
+    throw err;
+  }
+}
+
+
+
+// send 10 results from total results list
+export function loadRenderResults(page = state.search.page){
+    try {
+      
+      state.search.page = page;
+      const start = (page -1)*state.search.resultsPerPage; //0
+      const end = page*state.search.resultsPerPage; //10
+      // console.log(`results from model: ${state.search.results.map(rec=>{
+      //   console.log(rec);
+      // })}`);
+      return state.search.results.slice(start, end);
+
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+export const dataState = state;
+
 
 
 // Rapid API
@@ -184,23 +349,3 @@ exports.loadAllSearch = async function(query){
 //     throw error;
 //   }
 // }
-
-
-// send 10 results from total results list
-exports.loadRenderResults = function(page = state.search.page){
-    try {
-      
-      state.search.page = page;
-      const start = (page -1)*state.search.resultsPerPage; //0
-      const end = page*state.search.resultsPerPage; //10
-      // console.log(`results from model: ${state.search.results.map(rec=>{
-      //   console.log(rec);
-      // })}`);
-      return state.search.results.slice(start, end);
-
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-exports.dataState = state;

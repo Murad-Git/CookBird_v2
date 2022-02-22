@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "recipe page",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "nodemon server.js",
     "scss": "sass --watch assets/styles:assets/styles"
@@ -25,6 +26,7 @@
   "devDependencies": {
     "body-parser": "^1.19.2",
     "ejs": "^3.1.6",
+    "eslint": "^8.9.0",
     "morgan": "^1.10.0",
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.15",
