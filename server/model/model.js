@@ -33,6 +33,7 @@ const createRecipeObject = function (recipe){
       originSourceUrl: data.sourceUrl,
       cuisines: data.cuisines,
       dishTypes: data.dishTypes,
+      // TODO: add instruction pop-up window =>data.instructions
       instruction: data.instructions,
       instructionsAnalize: data.analyzedInstructions[0]?data.analyzedInstructions[0]?.steps:'',
       pricePerServings: data.pricePerServing,
@@ -47,6 +48,9 @@ const createRecipeObject = function (recipe){
       vegetarian: data.vegetarian,
       veryHealthy: data.veryHealthy,
       glutenFree: data.glutenFree,
+      winePairing: data.WinePairing?data.WinePairing.productMatches:'',
+      // ID with wine pairing 642403
+      // only winePairing.pairingText may exists.  winePairing.pairedWines = false, winePairing.pairingText = true;
     }
   };
   
@@ -252,11 +256,11 @@ export async function loadAllSearch(query){
 
 export async function loadNutrition(id){
   try {
-
-        const request = await axios({
-          method: "GET",
-          url: `https://api.spoonacular.com/recipes/${id}/nutritionLabel?apiKey=8dd25d27a6fb41f28a3a830fe78fae94`,
-      });
+      console.log(`ID received in model: ${id}`);
+      const request = await axios({
+        method: "GET",
+        url: `https://api.spoonacular.com/recipes/${id}/nutritionLabel?apiKey=8dd25d27a6fb41f28a3a830fe78fae94`,
+    });
 
       // status check
       if(request.status == 200) console.log(`status: ${request.status}, data: ${request.data}`);

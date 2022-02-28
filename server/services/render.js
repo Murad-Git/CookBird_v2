@@ -71,17 +71,19 @@ export async function getRecipe(req, res){
 }
 
 
-// render nutritin
+// render nutrition
 export async function getNutrition(req,res){
     try {
         // get recipe id
         const id = req.params.id;
-        const data = await loadNutritionData(id);
-        // btn();
-        return data
+        console.log(`id from render.js: ${id}`);
+        const dataNutr = await loadNutritionData(id);
+        res.render('modal_nutrition', {nutritionInfo: dataNutr});
 
     } catch (error) {
         res.status(500).send({message: error.message});
     }
 }
+
+
 

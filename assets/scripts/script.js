@@ -19,7 +19,6 @@ const nutritionBtn = document.querySelector('.view-full-nutrition-link')
 const modal = document.querySelector('.js-Modal-full-nutrition');
 const modalCloseBtn = document.querySelector('.frame__close-btn');
 
-
 // modalCloseBtn.addEventListener('click',function(e) {
 //     modal.classList.remove('modal--active');
 // });
@@ -33,7 +32,7 @@ const modalCloseBtn = document.querySelector('.frame__close-btn');
 // });
 
 const backTopBtn = document.querySelector('.back-top');
-let isOpen = true;
+// let isOpen = true;
 
 // back to top btn
 document.addEventListener('scroll', function(e){
@@ -51,48 +50,54 @@ backTopBtn.addEventListener('click', function(e){
 });
 
 // side menu collapse button
-document.querySelector('.filters').addEventListener('click',function(e){
-    isOpen = !isOpen;
-    // button
-    const filterBtn = e.target.closest('.js-filter-group');
-    if(!filterBtn) return;
-    // console.log(filterBtn.children[0].innerHTML);
-    const filterContent = filterBtn.nextElementSibling;
-    if(isOpen){
-        filterContent.classList.remove('dropdown-close');
-        filterContent.classList.add('dropdown-open');
-        filterBtn.children[0].innerHTML = '<i class="fas fa-chevron-circle-down"></i>'
-    }if(!isOpen){
-        filterContent.classList.remove('dropdown-open');
-        filterContent.classList.add('dropdown-close');
-        filterBtn.children[0].innerHTML = '<i class="fa-solid fa-circle-chevron-up"></i>'
-    }
-});
+// document.querySelector('.filters').addEventListener('click',function(e){
+//     let isOpen;
 
-// see more collapse button
-document.querySelector('.filters').addEventListener('click', function(e) {
-    const moreBtn = e.target.closest('.js-see-more-btn');
-    if(!moreBtn) return;
-    const ulElement = moreBtn.previousElementSibling;
-    // console.log(ulElement);
+//     // button
+//     const filterBtn = e.target.closest('.js-filter-group');
+//     if(!filterBtn) return;
+//     const filterContent = filterBtn.nextElementSibling;
+//     if(filterContent.classList.contains('dropdown-close'))isOpen = false;
+//     if(filterContent.classList.contains('dropdown-open'))isOpen = true;
 
-    [...ulElement.children].map(li=>li.classList.contains('cousine-more')?li.classList.toggle('hide'):'');
+//     if(!isOpen){
+//         filterContent.classList.remove('dropdown-close');
+//         filterContent.classList.add('dropdown-open');
+//         filterBtn.children[0].innerHTML = '<i class="fas fa-chevron-circle-down"></i>'
+//     }if(isOpen){
+//         filterContent.classList.remove('dropdown-open');
+//         filterContent.classList.add('dropdown-close');
+//         filterBtn.children[0].innerHTML = '<i class="fa-solid fa-circle-chevron-up"></i>'
+//     }
+// });
 
-});
+// 'see more' collapse button
+// document.querySelector('.filters').addEventListener('click', function(e) {
+//     const moreBtn = e.target.closest('.js-see-more-btn');
+//     if(!moreBtn) return;
+//     const ulElement = moreBtn.previousElementSibling;
+//     // console.log(ulElement);
+
+//     [...ulElement.children].map(li=>li.classList.contains('cousine-more')?li.classList.toggle('hide'):'');
+
+// });
 
 // Media queries
 // collaps
-
 const mediaQuery = window.matchMedia("(max-width: 766px)");
 
 function handleTabletChange(e) {
     if(e.matches){
         document.querySelectorAll('.collapse-in').forEach(collapsDiv=>{
+            const btn = collapsDiv.previousElementSibling.children[0];
+            btn.innerHTML = '<i class="fa-solid fa-circle-chevron-up"></i>'
             collapsDiv.classList.remove('dropdown-open');
             collapsDiv.classList.add('dropdown-close');
         });
     }else{
         document.querySelectorAll('.collapse-in').forEach(collapsDiv=>{
+        const btn = collapsDiv.previousElementSibling.children[0];
+        btn.innerHTML = '<i class="fas fa-chevron-circle-down"></i>'
         collapsDiv.classList.remove('dropdown-close');
         collapsDiv.classList.add('dropdown-open');
         })

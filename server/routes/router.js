@@ -12,13 +12,14 @@
 
 // module.exports = route;
 import { Router } from 'express';
-import { homeRoutes, getRecipe } from '../services/render.js';
+import { homeRoutes, getRecipe,getNutrition } from '../services/render.js';
 const route = Router();
 
 
 route.get('/', homeRoutes);
 
 route.get('/:id', getRecipe);
+// route.get('/:id/nutrition', getNutrition);
 
 
 export default route;

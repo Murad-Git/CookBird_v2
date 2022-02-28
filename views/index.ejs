@@ -45,7 +45,7 @@
                 <div class="container-in">
                     <div class="row">
                         <!-- SECTION: SEARCH SIDE BAR -->
-                        <section class="col-md-3 cookbird-side-bar">
+                        <section class="col-md-3 col-sm-12 cookbird-side-bar">
                             <div class="filters">
                                 <div class="accordion" id="filter-mealTypes">
                                     <div class="accordion-group">
@@ -160,11 +160,11 @@
                             </div>
                         </section>
                         <!-- SECTION: RECIPES CONTENT -->
-                        <section class="col-md-9" id="cookbird-thumbs">
+                        <section class="col-md-9 col-sm-12" id="cookbird-thumbs">
                             <div class="row cookbird-thumbs-out">
  
                                     <%recipes.forEach(recipe=>{%>
-                                        <div class="recipe-thumb col-md-4">
+                                        <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
                                             <a class="recipe-anchor" href="/<%=recipe.id%>">
                                                 <div class="recipe-img-link">
                                                     <figure>

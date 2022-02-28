@@ -12,15 +12,15 @@
         </header>
         <!-- SECTION: RECIPE HERO -->
         <div class="recipe-page-main" role="main">
-            <div class="container owl-container " id="main-content">
+            <div class="container recipe-main-container owl-container " id="main-content">
                 <section class="section-recipe recipe-main row">
-                    <div class="cb-hero-image col-sm-7 ">
+                    <div class="cb-hero-image col-md-7">
                         <div class="cb-hero-image__hldr">
-                            <img src="<%=recipe.image%>" alt="<%=recipe.title%>" class="img-max">
+                            <img src="<%=recipe.image%>" alt="<%=recipe.title%>" class="img-max-recipe">
                         </div>
                     </div>
                     <!-- description bar -->
-                    <div class="col-sm-5">
+                    <div class="col-sm-12 col-md-5 description-bar">
                         <!-- title -->
                         <div class="cb-recipe-title p-15">
                             <h1 class="cb-recipe-title__main"><%=recipe.title%></h1>
@@ -38,7 +38,7 @@
                             <%if(recipe.pricePerServings){%>
                                 <span class="cb-recipe-details__price">$<%=recipe.pricePerServings%>/serving</span>
                             <%}%>
-                            <span class="cb-recipe--detail cd-recipe-servings" itemprop="recipeYield"><%=recipe.servings%> Servings</span>
+                            <span class="cb-recipe--detail cb-recipe-details__servings" itemprop="recipeYield"><%=recipe.servings%> Servings</span>
                         </div>
 
                         <!-- <div class="p-15 hide" >
@@ -65,11 +65,57 @@
                             </ul>
                             <!-- Full Nutrition button -->
                             <div class="view-full-nutrition-container js-NutritionCalories">
-                                <span class="view-full-nutrition-link">
+                                <!-- <button>                                <a class="view-full-nutrition-link" href="http://">View Full Nutrition
+                                </a></button> -->
+                                <button class="view-full-nutrition-link"><a  href="/nutrition">View Full Nutrition
+                                </a></button>
+
+                                <!-- <span class="view-full-nutrition-link">
                                     View Full Nutrition
-                                </span>
+                                </span> -->
                             </div>
                         </div>
+                        <!-- Wine pairing -->
+                        <%if(recipe.winePairing){%>
+                            <div class="js-WinePairing">
+                                <section class="recipe-wine">
+                                    <h3 class="recipe-wine--title">cook bird wine pairing</h3>
+                                    <div class="recipe-wine__content">
+                                        <!-- Carousel  -->
+                                        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <%recipe.winePairing.forEach(wine=>{%>
+                                                <div class="carousel-item active">
+                                                    <div class="recipe-wine--content p-15">
+                                                        <a class="recipe-wine__container" href="<%=wine.link%>">
+                                                            <div class="recipe-wine-bottle">
+                                                                <img class="img-max d-block w-100 recipe-wine-img" src="<%=wine.imageUrl%>" class="d-block w-100" alt="<%=wine.title%>">
+                                                            </div>
+                                                            <div class="recipe-wine-text">
+                                                                <h4 class="mb-2">
+                                                                    <span class="recipe-wine-text--title"><%=wine.title%></span>
+                                                                    <span class="recipe-wine-text--price"><%=wine.price%></span>
+                                                                </h4>
+                                                                <p class="recipe-wine-text--description recipe-wine-text--description--hidden"><%=wine.description%></p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <%})%>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        <%}%>
                     </div>
                 </section>
                 
@@ -171,10 +217,6 @@
 <!-- include footer -->
 <%- include('partials/_footer.ejs') %>
 <!-- include footer -->
-
-<!-- include modal Nutrition -->
-<%- include('partials/_modals.ejs') %>
-<!-- include modal Nutrition -->
 
 </body>
 </html>

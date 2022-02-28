@@ -22,22 +22,22 @@
 <body>
     <div class="body-wrap">
         <!-- LOGO -->
-        <header class= "header-main">
+        <header class= "header-main-recipe">
             <div class="container">
                 <a href="/" class="logo">Logo</a>
             </div>
         </header>
         <!-- SECTION: RECIPE HERO -->
         <div class="recipe-page-main" role="main">
-            <div class="container owl-container " id="main-content">
+            <div class="container recipe-main-container owl-container " id="main-content">
                 <section class="section-recipe recipe-main row">
-                    <div class="cb-hero-image col-sm-7 ">
+                    <div class="cb-hero-image col-md-7">
                         <div class="cb-hero-image__hldr">
-                            <img src="../assets/images/food-img.png" alt="recipe-img" class="img-max">
+                            <img src="../assets/images/food-img.png" alt="recipe-img" class="img-max-recipe">
                         </div>
                     </div>
                     <!-- description bar -->
-                    <div class="col-sm-5">
+                    <div class="col-sm-12 col-md-5 description-bar">
                         <!-- title -->
                         <div class="cb-recipe-title p-15">
                             <h1 class="cb-recipe-title__main">Garlic-Caper Chicken</h1>
@@ -80,13 +80,83 @@
                             </ul>
                             <!-- Full Nutrition button -->
                             <div class="view-full-nutrition-container js-NutritionCalories">
-                                <button class="view-full-nutrition-link">
-                                    View Full Nutrition
-                                </button>
+                                <button class="view-full-nutrition-link"><a  href="/:id/nutrition">View Full Nutrition
+                                </a></button>
+                                <!-- -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59)); -->
                                 <!-- <span class="view-full-nutrition-link">
                                     View Full Nutrition
                                 </span> -->
                             </div>
+                        </div>
+                        <!-- Wine pairing -->
+
+                        <div class="js-WinePairing">
+                            <section class="recipe-wine">
+                                <h3 class="recipe-wine--title">cook bird wine pairing</h3>
+                                <div class="recipe-wine__content">
+                                    <!-- Carousel  -->
+                                    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                          <div class="carousel-item active">
+                                            <div class="recipe-wine--content p-15">
+                                                <a class="recipe-wine__container" href="#">
+                                                    <div class="recipe-wine-bottle">
+                                                        <img class="img-max d-block w-100 recipe-wine-img" src="../assets/images/Lusu-Cellars_Carignan_red.png" class="d-block w-100" alt="...">
+                                                    </div>
+                                                    <div class="recipe-wine-text">
+                                                        <h4 class="mb-2">
+                                                            <span class="recipe-wine-text--title">Mt. Beautiful</span>
+                                                            <span class="recipe-wine-text--price">$38.99</span>
+                                                        </h4>
+                                                        <p class="recipe-wine-text--description recipe-wine-text--description--hidden">Aromas of black tea and cardamon are layered by notes of blueberry and blackberry. Fresh flavors of cranberry, plum and orange peel provide lively savory notes with a touch of mineral and cardamon. This is a rich and full-bodied Pinot Noir with balanced acidity and a finely textured finish.</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                          </div>
+                                          <div class="carousel-item ">
+                                            <div class="recipe-wine--content p-15">
+                                                <a class="recipe-wine__container" href="#">
+                                                    <div class="recipe-wine-bottle">
+                                                        <img class="img-max d-block w-100" src="../assets/images/Lusu-Cellars_Carignan_red.png" class="d-block w-100" alt="...">
+                                                    </div>
+                                                    <div class="recipe-wine-text">
+                                                        <h4 class="mb-2">
+                                                            <span class="recipe-wine-text--title">Mt. Beautiful</span>
+                                                            <span class="recipe-wine-text--price">$38.99</span>
+                                                        </h4>
+                                                        <p class="recipe-wine-text--description">Aromas of black tea and cardamon are layered by notes of blueberry and blackberry. Fresh flavors of cranberry, plum and orange peel provide lively savory notes with a touch of mineral and cardamon. This is a rich and full-bodied Pinot Noir with balanced acidity and a finely textured finish.</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                          </div>
+                                          <div class="carousel-item ">
+                                            <div class="recipe-wine--content p-15">
+                                                <a class="recipe-wine__container" href="#">
+                                                    <div class="recipe-wine-bottle">
+                                                        <img class="img-max d-block w-100" src="../assets/images/Lusu-Cellars_Carignan_red.png" class="d-block w-100" alt="...">
+                                                    </div>
+                                                    <div class="recipe-wine-text">
+                                                        <h4 class="mb-2">
+                                                            <span class="recipe-wine-text--title">Mt. Beautiful</span>
+                                                            <span class="recipe-wine-text--price">$38.99</span>
+                                                        </h4>
+                                                        <p class="recipe-wine-text--description">Aromas of black tea and cardamon are layered by notes of blueberry and blackberry. Fresh flavors of cranberry, plum and orange peel provide lively savory notes with a touch of mineral and cardamon. This is a rich and full-bodied Pinot Noir with balanced acidity and a finely textured finish.</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Next</span>
+                                        </button>
+                                      </div>
+                                </div>
+                            </section>
                         </div>
                     </div>
                 </section>
@@ -211,7 +281,7 @@
     <!-- SECTION: FOOTER -->
     <footer class="footer">
         <div class="container footer-content">
-            <div class="col-md-3 contact-field row-fluid">
+            <div class="col-md-3 col-sm-12 contact-field row-fluid">
                 <h3 class="display-5 footer-contact">Contact me</h3>
                 <ul class="socials">
                     <li><i class="fab fa-facebook-f social"></i></li>
@@ -228,23 +298,189 @@
             </div>
         </div>
     </footer>
-    <div class="js-Modal-full-nutrition modal modal-full-nutrition">
-            <div class="frame-border">
-                <h1 class="cb-recipe-title__main--modal">Garlic-Caper Chicken</h1>
-            <div class="nutrition-label">
-           
-                <!-- html from API -->
-            <style>#spoonacular-nutrition-label,#spoonacular-nutrition-ingredient-list{border:1px solid black;margin:0 auto;width:300px;padding:.5rem;font-family:Helvetica,Arial,sans-serif,sans-serif;font-size:14px;color:#333;background-color:#fff}#spoonacular-nutrition-ingredient-list{text-transform:uppercase}#spoonacular-nutrition-label div.separator{border-bottom:10px solid black}#spoonacular-nutrition-label>div:first-of-type{border-bottom:10px solid black;padding:0 0 .25rem 0;margin:0 0 .5rem 0}#spoonacular-nutrition-label>div:first-of-type p{margin:0;font-size:16px}#spoonacular-nutrition-label table{border-collapse:unset;border-spacing:0;font-size:14px;width:100%}#spoonacular-nutrition-label table td{font-weight:normal;text-align:left;padding:.3rem 0;border-top:1px solid black;vertical-align:middle}#spoonacular-nutrition-label table .empty{width:1rem;border-top:0}#spoonacular-nutrition-label table #calorie-summary td{font-size:33px;border:0 none!important}#spoonacular-nutrition-label b{font-weight:900}#spoonacular-nutrition-label .separator td{border-top-width:5px}#spoonacular-nutrition-label table:first-of-type td:last-child{text-align:right!important}#spoonacular-nutrition-label table:nth-of-type(2) td:first-child{text-align:left!important}#spoonacular-nutrition-label table:nth-of-type(2) td:nth-of-type(2){text-align:right!important}#spoonacular-nutrition-label .small{font-size:11px}#spoonacular-nutrition-label h1.separator{border-bottom:1px solid black}#spoonacular-nutrition-label h1{font-size:35px;margin:0 0 .25rem 0}</style><section id=spoonacular-nutrition-label><div><h1><b>Nutrition Facts</b></h1></div><b>Amount Per Serving</b><table><tr id=calorie-summary><td colspan=2><b>Calories</b><td><b>787</b><tr class=separator><td colspan=3 class=small><b>% Daily Value*</b><tr><td colspan=2><b>Total Fat</b> 33g<td><b>43%</b><tr><td class=empty><td>Saturated Fat 8g<td><b>39%</b><tr><td class=empty><td><i>Trans</i> Fat 0.09g<td><tr><td colspan=2><b>Cholesterol</b> 96mg<td><b>32%</b><tr><td colspan=2><b>Sodium</b> 964mg<td><b>42%</b><tr><td colspan=2><b>Total Carbohydrate</b> 81g<td><b>30%</b><tr><td class=empty><td>Dietary Fiber 10g<td><b>36%</b><tr><td class=empty><td>Total Sugars 8g<td><tr><td colspan=2><b>Protein</b> 41g<td><b>81%</b></table><div class=separator></div><table><tr><td>Vitamin D 0.95mcg<td>5%<tr><td>Calcium 180mg<td>14%<tr><td>Iron 5mg<td>28%<tr><td>Potassium 2396mg<td>51%<tr class=separator><td colspan=2 class=small>*The % Daily Value tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.</table></section>
-            </div>
-                <div class="ingredients">
-                    <h6>INGREDIENTS:</h6>
-                    <p>round pizza pans, or a couple of large baking sheets. Mix the flour, oil, and water together - the mixture will be shaggy. Use your hands to gather it together and form into a ball. Divide it in two and form each half into a disk the rounder the better. Cover with saran wrap and allow to rest 10 minutes to make for easier rolling - skip this step if you're in a hurry. </p>
-                </div>
-                <span class="frame__close-btn"><i class="fa-solid fa-circle-xmark"></i></span>
-            </div>
-            
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    <!-- <script type="module" defer src="js/script.js"></script> -->
+    <div class="js-Modal-full-nutrition modal modal-full-nutrition">
+        <div class="frame-border">
+            <h1 class="cb-recipe-title__main--modal">recipe.title</h1>
+            <div class="nutrition-label">
+                <style type="text/css">
+                    #spoonacular-nutrition-label,
+                    #spoonacular-nutrition-ingredient-list {
+                        border: 1px solid black;
+                        margin: 0 auto;
+                        width: 300px;
+                        padding: .5rem;
+                        font-family: Helvetica, Arial, sans-serif, sans-serif;
+                        font-size: 14px;
+                        color: #333;
+                        background-color: #fff
+                    }
+                
+                    #spoonacular-nutrition-ingredient-list {
+                        text-transform: uppercase
+                    }
+                
+                    #spoonacular-nutrition-label div.separator {
+                        border-bottom: 10px solid black
+                    }
+                
+                    #spoonacular-nutrition-label>div:first-of-type {
+                        border-bottom: 10px solid black;
+                        padding: 0 0 .25rem 0;
+                        margin: 0 0 .5rem 0
+                    }
+                
+                    #spoonacular-nutrition-label>div:first-of-type p {
+                        margin: 0;
+                        font-size: 16px
+                    }
+                
+                    #spoonacular-nutrition-label table {
+                        border-collapse: unset;
+                        border-spacing: 0;
+                        font-size: 14px;
+                        width: 100%
+                    }
+                
+                    #spoonacular-nutrition-label table td {
+                        font-weight: normal;
+                        text-align: left;
+                        padding: .3rem 0;
+                        border-top: 1px solid black;
+                        vertical-align: middle
+                    }
+                
+                    #spoonacular-nutrition-label table .empty {
+                        width: 1rem;
+                        border-top: 0
+                    }
+                
+                    #spoonacular-nutrition-label table #calorie-summary td {
+                        font-size: 33px;
+                        border: 0 none !important
+                    }
+                
+                    #spoonacular-nutrition-label b {
+                        font-weight: 900
+                    }
+                
+                    #spoonacular-nutrition-label .separator td {
+                        border-top-width: 5px
+                    }
+                
+                    #spoonacular-nutrition-label table:first-of-type td:last-child {
+                        text-align: right !important
+                    }
+                
+                    #spoonacular-nutrition-label table:nth-of-type(2) td:first-child {
+                        text-align: left !important
+                    }
+                
+                    #spoonacular-nutrition-label table:nth-of-type(2) td:nth-of-type(2) {
+                        text-align: right !important
+                    }
+                
+                    #spoonacular-nutrition-label .small {
+                        font-size: 11px
+                    }
+                
+                    #spoonacular-nutrition-label h1.separator {
+                        border-bottom: 1px solid black
+                    }
+                
+                    #spoonacular-nutrition-label h1 {
+                        font-size: 35px;
+                        margin: 0 0 .25rem 0
+                    }
+                </style>
+                <section id="spoonacular-nutrition-label">
+                    <div>
+                        <h1><b>Nutrition Facts</b></h1>
+                    </div>
+                    <b>Amount Per Serving</b>
+                    <table>
+                        <tr id="calorie-summary">
+                            <td colspan="2"><b>Calories</b></td>
+                            <td><b>516</b></td>
+                        </tr>
+                        <tr class="separator">
+                            <td colspan="3" class="small"><b>% Daily Value*</b></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><b>Total Fat</b> 41g</td>
+                            <td><b>53%</b></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td>Saturated Fat 7g</td>
+                            <td><b>33%</b></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td><i>Trans</i> Fat 0g</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><b>Cholesterol</b> 0mg</td>
+                            <td><b>0%</b></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><b>Sodium</b> 356mg</td>
+                            <td><b>15%</b></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><b>Total Carbohydrate</b> 28g</td>
+                            <td><b>10%</b></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td>Dietary Fiber 10g</td>
+                            <td><b>34%</b></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td>Total Sugars 11g</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><b>Protein</b> 17g</td>
+                            <td><b>35%</b></td>
+                        </tr>
+                    </table>
+                    <div class="separator"></div>
+                    <table>
+                        <tr>
+                            <td>Vitamin D 0mcg</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>Calcium 141mg</td>
+                            <td>11%</td>
+                        </tr>
+                        <tr>
+                            <td>Iron 3mg</td>
+                            <td>19%</td>
+                        </tr>
+                        <tr>
+                            <td>Potassium 823mg</td>
+                            <td>18%</td>
+                        </tr>
+                        <tr class="separator">
+                            <td colspan="2" class="small">*The % Daily Value tells you how much a nutrient in a serving of food
+                                contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.</td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+            <div class="ingredients">
+                <h6>INGREDIENTS:</h6>
+                <p>
+                    asdsad
+                </p>
+            </div>
+            <span class="frame__close-btn"><i class="fa-solid fa-circle-xmark"></i></span>
+        </div>
+    </div>
 </body>
 </html>
