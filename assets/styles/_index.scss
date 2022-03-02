@@ -1,0 +1,112 @@
+// main content
+.cookbird-page{
+    background-color: #ffff;
+}
+
+// search bar
+.search-bar{
+    background: #f7f7f7;
+    padding:1rem 0;
+    border-bottom: solid 1px #e7e6eb;
+    &__icon{
+        display:flex;
+        align-items: center;
+    }
+    &__title{
+        font-size: 2.4rem;
+        font: inherit;
+    }
+    &__href{
+        text-decoration: none;
+        color: #0f346c;
+    }
+}
+.search-input{
+    box-shadow:inset 0 2px 2px rgba(0, 0, 0,  0.15);
+    padding:0 1rem;
+    border-radius: 0.3rem;
+    width:100%;
+    height:4rem;
+    line-height: 4rem;
+    font-size: 1.5rem;
+    &::placeholder{
+        color: rgb(117, 117, 117);
+        line-height: inherit;
+        overflow-wrap: normal;
+
+    }
+}
+
+// contener to margin content
+.container-in{
+    margin:3rem 0;
+}
+
+// SECTION: SEARCH SIDE BAR
+.cookbird-side-bar{
+    width:20%;
+}
+.accordion{
+    border-top: solid 1px #d3d5db;
+    &:last-child{
+        border-bottom: solid 1px #d3d5db;
+    }
+    &-group{
+        margin-bottom: 1.5rem;
+        padding-top: 1.5rem;
+        .group-items{
+            cursor: pointer;
+            font-size: 1.6rem;
+            display: flex;
+            justify-content: space-between;
+            // sidebar menu toggler btn
+            .toggler{
+                margin-right: 2rem;
+                border: none;
+                background: none;
+                color: #0f346c;
+            }
+        }
+        .group-list{
+            list-style: none;
+            padding-left: 0;
+            margin: 1rem 0;
+            & li{
+                color: #6a6d75;
+            }
+        }
+    }
+    &-body{
+        padding: 0 0 0 1rem;
+    }
+}
+
+// SECTION: RECIPES content
+.recipe-anchor{
+    text-decoration: none;
+    color: #0f346c;
+    & h3{
+        margin-bottom: 0.1rem;
+        font-family: inherit;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #303236;
+    }
+    &:hover{
+        color: inherit;
+    }
+    &__link{
+        margin-bottom: 1rem;
+        position: relative;
+        .recipe-main-img{
+            // object-fit: cover;
+            max-width: 100%;
+            border: none;
+            &:hover{
+                outline: 2px solid #0f346c;
+                -moz-outline-radius: 25px;
+            }
+        }
+    }
+}

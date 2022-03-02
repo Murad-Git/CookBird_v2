@@ -1,48 +1,26 @@
-// const require = require('require');
-// const renderJs = require('../../server/services/render.js');
-// const nutritionBtn = document.querySelector('.view-full-nutrition-link')
-// const modal = document.querySelector('.modal');
-// const modalCloseBtn = document.querySelector('.frame__close-btn');
-
-// modalCloseBtn.addEventListener('click',function(e) {
-//     modal.classList.remove('modal--active');
-// });
-
-// nutritionBtn.addEventListener('click', async function(e) {
-//     const html = await renderJs.getNutrition();
-//     modal.innerHTML = html;
-//     modal.classList.add('modal--active');
-// });
-// import { getNutrition } from '../server/services/render.js';
-
-const nutritionBtn = document.querySelector('.view-full-nutrition-link')
-const modal = document.querySelector('.js-Modal-full-nutrition');
-const modalCloseBtn = document.querySelector('.frame__close-btn');
-
-// modalCloseBtn.addEventListener('click',function(e) {
-//     modal.classList.remove('modal--active');
-// });
-
-// nutritionBtn.addEventListener('click', async function(e) {
-//     console.log(`nutrition btn was clicked!`);
-//     const data = await getNutrition();
-//     console.log(data);
-//     // modal.innerHTML = html;
-//     // modal.classList.add('modal--active');
-// });
-
+'use strict'
 const backTopBtn = document.querySelector('.back-top');
-// let isOpen = true;
 
 // back to top btn
 document.addEventListener('scroll', function(e){
+    const loadMoreDiv = document.querySelector('.js-load-more');
+    const elBounding = loadMoreDiv.getBoundingClientRect();
+
     const scrollPosition = window.scrollY;
     if(scrollPosition>300){
         backTopBtn.classList.add('back-top--active');
     }else{
         backTopBtn.classList.remove('back-top--active');
     }
-});
+
+    // handling load more function
+    if(elBounding.top>=0 && elBounding.left >=0 && elBounding.right <=window.innerWidth && elBounding.bottom <=window.innerHeight){
+        console.log(`Element is in viewport!`);
+    }else{
+        console.log(`Element is NOT in viewport!`);
+
+    }
+},true);
 
 backTopBtn.addEventListener('click', function(e){
     e.preventDefault();
@@ -50,37 +28,36 @@ backTopBtn.addEventListener('click', function(e){
 });
 
 // side menu collapse button
-// document.querySelector('.filters').addEventListener('click',function(e){
-//     let isOpen;
+document.querySelector('.js-filters').addEventListener('click',function(e){
+    let isOpen;
 
-//     // button
-//     const filterBtn = e.target.closest('.js-filter-group');
-//     if(!filterBtn) return;
-//     const filterContent = filterBtn.nextElementSibling;
-//     if(filterContent.classList.contains('dropdown-close'))isOpen = false;
-//     if(filterContent.classList.contains('dropdown-open'))isOpen = true;
+    const filterBtn = e.target.closest('.js-filter-group');
+    if(!filterBtn) return;
+    const filterContent = filterBtn.nextElementSibling;
+    if(filterContent.classList.contains('dropdown-close'))isOpen = false;
+    if(filterContent.classList.contains('dropdown-open'))isOpen = true;
 
-//     if(!isOpen){
-//         filterContent.classList.remove('dropdown-close');
-//         filterContent.classList.add('dropdown-open');
-//         filterBtn.children[0].innerHTML = '<i class="fas fa-chevron-circle-down"></i>'
-//     }if(isOpen){
-//         filterContent.classList.remove('dropdown-open');
-//         filterContent.classList.add('dropdown-close');
-//         filterBtn.children[0].innerHTML = '<i class="fa-solid fa-circle-chevron-up"></i>'
-//     }
-// });
+    if(!isOpen){
+        filterContent.classList.remove('dropdown-close');
+        filterContent.classList.add('dropdown-open');
+        filterBtn.children[0].innerHTML = '<i class="fas fa-chevron-circle-down"></i>'
+    }if(isOpen){
+        filterContent.classList.remove('dropdown-open');
+        filterContent.classList.add('dropdown-close');
+        filterBtn.children[0].innerHTML = '<i class="fa-solid fa-circle-chevron-up"></i>'
+    }
+});
 
 // 'see more' collapse button
-// document.querySelector('.filters').addEventListener('click', function(e) {
-//     const moreBtn = e.target.closest('.js-see-more-btn');
-//     if(!moreBtn) return;
-//     const ulElement = moreBtn.previousElementSibling;
-//     // console.log(ulElement);
+document.querySelector('.js-filters').addEventListener('click', function(e) {
+    const moreBtn = e.target.closest('.js-see-more-btn');
+    if(!moreBtn) return;
+    const ulElement = moreBtn.previousElementSibling;
+    // console.log(ulElement);
 
-//     [...ulElement.children].map(li=>li.classList.contains('cousine-more')?li.classList.toggle('hide'):'');
+    [...ulElement.children].map(li=>li.classList.contains('cousine-more')?li.classList.toggle('hide'):'');
 
-// });
+});
 
 // Media queries
 // collaps

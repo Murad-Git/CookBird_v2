@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&family=PT+Sans&display=swap');
+@import url('./fonts/Chronicle\ Display\ Roman.otf');
+
+// variables
+$bp-large: 962px; // 962px
+$bp-medium: 766px; // 766px
+// $bp-small: 37.5em; // 600px
+// $bp-smallest: 31.25em; // 500px
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+
+html{
+    box-sizing: border-box;
+    font-size: 10px;
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 60%;
+    }
+}
+body{
+    margin: 0;
+    padding: 0;
+    border:0;
+    height:100%;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    color: #6a6d75;
+}
+h1{
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+h2{
+    font-weight: 600;
+    line-height: 1.2;
+    color: #303236;
+}
+h4{
+    font-weight: 600;
+    line-height: 1.2;
+    color: #303236;
+}
+
+ol, ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+// about page
+.body-wrap{
+    min-height: 100%;
+}
+
+
+
+// Media queries
+@media screen and (max-width: 992px){
+    // about page
+    .recipe-main-container{
+        max-width: 75rem;
+    }
+};
+
+@media screen and (min-width: 962px){
+    // MAIN RECIPE SECTION
+    .section-recipe{
+        margin-top: 1.5rem;
+        padding-right: 0;
+        padding-left:0;
+        padding-bottom: 5.6rem;
+    }
+    .section-recipe.recipe-main{
+        margin-top: 2.5rem;
+        padding-bottom: 5.6rem;
+    }
+    .section-recipe .cb-hero-image{
+        margin-bottom: 3rem;
+
+    }
+
+    // INGREDIENTS SECTION
+    .non-story{
+        padding: 0.4rem 0;
+        color: #0f346c;
+    }
+    .step-title-holder{
+        margin-top: 1rem;
+    }
+    .recipeInstructions{
+        padding: 0;
+    }
+
+    // RECIPE PAGE (ABOUT.HTML)
+    .section-recipe{
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .recipe-wine{
+        margin-bottom: 2rem;
+    }
+    .recipe-main-container{
+        overflow: inherit;
+
+    }
+}
+
+@media screen and (max-width: 766px) {
+    .row{
+        margin: 0;
+    }
+    .container{
+        overflow: hidden;
+    }
+    .cookbird-side-bar{
+        width:100%;
+        margin-bottom: 2rem;
+    }
+    .recipe-anchor{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin-bottom:2rem;
+        figure{
+            margin: 0 auto;
+        }
+        h3{
+            margin-right: 31rem;
+        }
+    }
+    .social{
+        justify-content:space-evenly;
+    }
+    .footer-contact{
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+    }
+    .accordion-group{
+        margin-bottom:0.7rem;
+        padding-top:1.4rem;
+    }
+    .recipe-image{
+        max-width: 45rem;
+    }
+
+    // RECIPE PAGE (ABOUT.HTML)
+    .recipe-main{
+        margin-top: 0;
+    }
+    .section-recipe{
+        margin-bottom: 2rem;
+    }
+    .header-main-recipe{
+        display: none;
+    }
+    .recipe-main-container{
+        padding: 0;
+        margin: 0;
+        max-width: 80rem;
+    }
+    .cb-hero-image{
+        padding: 0;
+        margin: 0;
+    }
+    .img-max-recipe{
+        width: 100%;
+    }
+    .description-bar{
+        padding: 0;
+        margin: 0 auto;
+    }
+    .cb-recipe-title{
+        padding: 2rem;
+        padding-bottom:1rem;
+        .total-time{
+            margin-left: 0.5rem;
+        }
+    }
+
+    .cb-recipe-details{
+        padding: 2rem;
+        padding-top:1rem;
+        border-bottom: 16px solid #f5f6f8;
+    }
+    .recipe-main__description{
+        padding: 2rem;
+        border-bottom: 16px solid #f5f6f8;
+    }
+    .nutrition-container{
+        padding: 2rem;
+        border-bottom: 16px solid #f5f6f8;
+        .nutrition-list{
+            padding:0;
+        }
+    }
+    .recipe-wine--title{
+        padding: 2rem;
+    }
+    .recipe-wine__content{
+        margin: 0 auto;
+    }
+    .cb-feature-image__hldr{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+    }
+    .rec-area-content .cb-feature-image__hldr .img-ingredients{
+        width: 30%;
+    }
+    .cb-info-list{
+        margin-top: 1.5rem;
+        &__item{
+            margin-bottom: 1rem;
+        }
+    }
+    .cb-section-title{
+        padding: 2rem;
+    }
+    .recipe-instructions{
+        padding: 2rem;
+    }
+    .header-side-steps{
+        margin-bottom: 2rem;
+    }
+}
+@media screen and (max-width:576px){
+    .recipe-main-container{
+        max-width: 60rem;
+    }
+    .contact-field{
+        width: 100%;
+    }
+}

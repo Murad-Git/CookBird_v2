@@ -1,0 +1,353 @@
+// SECTION: RECIPE Hero
+
+// .owl-container{
+//     overflow-x: hidden;
+// }
+
+.section-recipe{
+    border-bottom: 1px solid #e4e6eb;
+    padding-bottom: 2rem;
+    margin-bottom: 5rem;
+    .cb-hero-image{
+        min-height: 0.1rem;
+        // Hero IMG
+        .img-max-recipe{
+            width: 95%;
+        }
+    }
+}
+.recipe-main{
+    margin-top: 2.5rem;
+}
+// description bar
+// title
+.cb-recipe-title{
+    margin-bottom: 1rem;
+        &__main{
+        font-size: 3rem;
+        font-weight: 600;
+        font-family: "Chronicle Ssm";
+        color: #002c9b;
+        margin-bottom: 1.2rem;
+    }
+    &__sub{
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: #6a6d75;
+        margin-bottom: 1.4rem;
+    }
+    // cooking time
+    .cb-recipe--details{
+        display: flex;
+        align-items: center;
+        .fa-clock{
+            font-size: 1.8rem;
+            color: #00a0df
+        }
+        .total-time{
+            margin-left: 0.8rem;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing:0.2rem;
+            color: #00a0df
+        }
+    }
+}
+
+// servings and pricing
+.cb-recipe-details{
+    margin-bottom: 2.5rem;
+    line-height: 1.4rem;
+    color: #6a6d75;
+
+    &__price{
+        color: #1eb392;
+        margin-right: 0.8rem;
+        line-height: 1;
+        font-weight: 600;
+
+    }
+    &__servings{
+        position: relative;
+    }
+}
+// description
+.recipe-main__description{
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    color: #595959;
+    &-title{
+        margin-bottom: 0.8rem;
+        font-size: 1.9rem;
+        line-height: 1.53;
+        color: #303236;
+    }
+    &-text{
+        margin-bottom: 1.5rem;
+        & a{
+            color: inherit;
+        }
+    }
+}
+// nutrition
+.nutrition-list{
+    margin-top: 4rem;
+    &--item{
+        display: flex;
+        align-items: baseline;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        line-height: 1.13;
+        color: #424242;
+        padding: 1.9rem 0;
+        border-bottom: 1px solid #e4e6eb;
+        &__heading{
+            padding:1.6rem 0;
+            .item-title{
+                font-weight: bold;
+                font-size: 1.9rem;
+                line-height: 1.53;
+                color: #303236
+            }
+            .item-value{
+                font-size: 1.4rem;
+                letter-spacing: 0.1rem;
+                line-height: 1.29;
+                color: #6a6d75;
+            }
+        }
+    }
+}
+.view-full-nutrition{
+    text-align: center;
+    &-link{
+        font-size: 1.4rem;
+        font-weight: bold;
+        line-height: 3.21;
+        letter-spacing:0.3rem;
+        color:#002c9b;
+        padding:0 2.4rem;
+        margin-top: 1.6rem;
+        cursor: pointer;
+        display: inline-block;
+        border-radius: 2.25rem;
+        text-transform: uppercase;
+        border: 1px solid #e4e6eb;
+    }
+}
+// Wine pairings
+.recipe-wine{
+    padding-top: 1.5rem;
+    position: relative;
+    &--title{
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.4rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid #e4e6eb;
+        text-transform: uppercase;
+    }
+    &__content{
+        width: 45rem;
+        position: relative;
+    }
+    &-image{
+        height: 100%;
+    }
+    &-bottle{
+        margin-right: 4rem;
+        width: 4.6rem;
+        height:14rem;
+    }
+    &-text{
+        width:25rem;
+        font-size: 1.6rem;
+        padding-left: 0.4rem;
+        white-space: normal;
+        &--title{
+            color: #0f346c;
+        }
+        &--price{
+            color: #6a6d75;
+            font-size: 1.4rem;
+            font-weight:400;
+            display: block;
+            margin-top: 0.4rem;
+        }
+        &--description{
+            max-height: 7.1rem;
+            font-size: 1.2rem;
+            line-height: 1.1;
+            font-weight: 300;
+            color: #303236;
+            margin: 0;
+            &--hidden{
+                max-height: 7.1rem;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+    &__container{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+// SECTION: INGREDIENTS
+// section title
+.cb-section-title{
+    margin-bottom: 2.5rem;
+    &__super{
+        font-family: "Chronicle Ssm";
+        font-size: 2rem;
+        color: #6a6d75;
+        text-transform: lowercase;
+        margin-bottom: 0.6rem;
+    }
+    &__main{
+        font-weight: 700;
+        font-size: 3rem;
+        color: #0f346c;
+        letter-spacing:0.3rem;
+        text-transform: uppercase;
+    }
+}
+// ing images
+.rec-area-content{
+    min-height: 37.5rem;
+    position: relative;
+    .cb-feature-image{
+        position: relative;
+        &__hldr{
+            // max-width: 70rem;
+            .img-ingredients{
+                width:25%;
+                max-height: 40rem;
+                padding:1rem;
+            }
+        }
+    }
+    .cb-info-list__item{
+        color: #0f346c;
+        line-height: 2.5;
+        font-weight: 600;
+        font-size: 1.6rem;
+        .non-story{
+            padding: 0.4rem 0;
+            color: #0f346c;
+            .cb-info-list__amount{
+                font-family: "Chronicle Ssm";
+                font-weight: 500;
+                color: #6a6d75;
+                width: 23%;
+                display: inline-block;
+                text-align: right;
+                margin-right: 0.5rem;
+            }
+        }
+
+    }
+}
+// INSTRUCTION SECTION
+.steps {
+    .singleStep{
+        margin-bottom: 2rem;
+        .recipeInstructions{
+            padding: 0;
+        }
+    }
+    .step-title-holder{
+        margin-top: 1rem;
+        font-weight: 500;
+        color: #0f346c;
+        margin-bottom: 1.5rem;
+        padding-bottom:1.5rem;
+        border-bottom: 1px solid #e4e6eb;
+        min-height: 2.6rem;
+        line-height: 2.6rem;
+    }
+    .step-number{
+        background-color: #0f346c;
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.4rem;
+        text-align: center;
+        padding: 0.7rem 1.3rem;
+        width: 1.2rem;
+        margin-right: 1rem;
+        border-radius:50%;
+    }
+    .step-title{
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #303236;
+        width:auto;
+    }
+    .step-txt{
+        color: #303236;
+        font-size: 1.5rem;
+        line-height: 1.7;
+        & p {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+
+
+// Media queries
+@media screen and (max-width: 992px){
+    // about page
+    .recipe-main-container{
+        max-width: 75rem;
+    }
+};
+// @media screen and (min-width: 962px){
+//     // MAIN RECIPE SECTION
+//     .section-recipe{
+//         margin-top: 1.5rem;
+//         padding-right: 0;
+//         padding-left:0;
+//         padding-bottom: 5.6rem;
+//     }
+//     .section-recipe.recipe-main{
+//         margin-top: 2.5rem;
+//         padding-bottom: 5.6rem;
+//     }
+//     .section-recipe .cb-hero-image{
+//         margin-bottom: 3rem;
+
+//     }
+
+//     // INGREDIENTS SECTION
+//     .non-story{
+//         padding: 0.4rem 0;
+//         color: #0f346c;
+//     }
+//     .step-title-holder{
+//         margin-top: 1rem;
+//     }
+//     .recipeInstructions{
+//         padding: 0;
+//     }
+
+//     // RECIPE PAGE (ABOUT.HTML)
+//     .section-recipe{
+//         margin-top: 1rem;
+//         margin-bottom: 2rem;
+//     }
+
+//     .recipe-wine{
+//         margin-bottom: 2rem;
+//     }
+//     .recipe-main-container{
+//         overflow: inherit;
+
+//     }
+// }

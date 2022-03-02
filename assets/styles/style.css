@@ -144,12 +144,12 @@ a {
   padding: 0;
 }
 
-.cookbird-title {
+.search-bar__title {
   font-size: 2.4rem;
   font: inherit;
 }
 
-.cookbird-href {
+.search-bar__href {
   text-decoration: none;
   color: #0f346c;
 }
@@ -188,10 +188,6 @@ a {
   color: #6a6d75;
 }
 
-.accordion-inner ul li {
-  color: #6a6d75;
-}
-
 .accordion-body {
   padding: 0 0 0 1rem;
 }
@@ -223,15 +219,15 @@ a {
   color: inherit;
 }
 
-.recipe-img-link {
+.recipe-anchor__link {
   margin-bottom: 1rem;
   position: relative;
 }
-.recipe-img-link img {
+.recipe-anchor__link img {
   max-width: 100%;
   border: none;
 }
-.recipe-img-link img:hover {
+.recipe-anchor__link img:hover {
   outline: 2px solid #0f346c;
   -moz-outline-radius: 25px;
 }
@@ -281,7 +277,7 @@ a {
   text-transform: uppercase;
 }
 
-.socials {
+.footer__socials {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -388,10 +384,10 @@ a {
   line-height: 1.53;
   color: #303236;
 }
-.recipe-main__description .description {
+.recipe-main__description .recipe-description-text {
   margin-bottom: 1.5rem;
 }
-.recipe-main__description .description a {
+.recipe-main__description .recipe-description-text a {
   color: inherit;
 }
 
@@ -425,10 +421,10 @@ a {
   color: #6a6d75;
 }
 
-.view-full-nutrition-container {
+.view-full-nutrition {
   text-align: center;
 }
-.view-full-nutrition-container .view-full-nutrition-link {
+.view-full-nutrition .view-full-nutrition-link {
   font-size: 1.4rem;
   font-weight: bold;
   line-height: 3.21;
@@ -528,13 +524,11 @@ a {
   margin-bottom: 1rem;
 }
 
-.header-side-steps {
+.about-btn {
   text-align: right;
+  display: inline-block;
 }
-.header-side-steps a {
-  text-decoration: none;
-}
-.header-side-steps .header-cook-along-btn {
+.about-btn__content {
   background-color: #002684;
   border-radius: 2.8rem;
   color: #fff;
@@ -544,8 +538,6 @@ a {
   padding: 1.4rem 1.9rem 1.6rem 1.4rem;
   letter-spacing: 0.1rem;
   line-height: 1.6rem;
-}
-.header-side-steps .source-url {
   text-transform: none;
   padding: 1rem 1.5rem 1.5rem 1.5rem;
 }

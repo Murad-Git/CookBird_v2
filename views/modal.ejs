@@ -1,9 +1,12 @@
+<!-- include header -->
+<%- include('partials/_header.ejs') %>
+<!-- include header -->
 <div class="js-Modal-full-nutrition modal modal-full-nutrition">
     <div class="frame-border">
         <h1 class="cb-recipe-title__main--modal">Title</h1>
         <div class="nutrition-label">
             <%if(nutritionInfo){%>
-                <%=nutritionInfo%>
+                document.querySelector('nutrition-label').innerHTML =<%=nutritionInfo%>
             <%}%>
         </div>
         <div class="ingredients">
@@ -15,3 +18,9 @@
         <span class="frame__close-btn"><i class="fa-solid fa-circle-xmark"></i></span>
     </div>
 </div>
+<!-- include footer -->
+<%- include('partials/_footer.ejs') %>
+<!-- include footer -->
+
+</body>
+</html>

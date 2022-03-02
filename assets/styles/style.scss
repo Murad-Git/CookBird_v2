@@ -171,11 +171,11 @@ a{
     // padding: 0 3.5rem;
     padding: 0;
 }
-.cookbird-title{
+.search-bar__title{
     font-size: 2.4rem;
     font: inherit;
 }
-.cookbird-href{
+.search-bar__href{
     text-decoration: none;
     color: #0f346c;
 }
@@ -210,13 +210,7 @@ a{
         }
     } 
 }
-.accordion-inner{
-    & ul{
-        & li{
-            color: #6a6d75
-        }
-    }
-}
+
 .accordion-body{
     padding: 0 0 0 1rem;
 }
@@ -244,7 +238,7 @@ a{
         color: inherit;
     }
 }
-.recipe-img-link{
+.recipe-anchor__link{
     margin-bottom: 1rem;
     position: relative;
     & img{
@@ -300,7 +294,7 @@ a{
     text-align: center;
     text-transform: uppercase;
 }
-.socials{
+.footer__socials{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -415,7 +409,7 @@ a{
         line-height: 1.53;
         color: #303236;
     }
-    .description{
+    .recipe-description-text{
         margin-bottom: 1.5rem;
         & a{
             color: inherit;
@@ -454,7 +448,7 @@ a{
     }
 
 }
-.view-full-nutrition-container{
+.view-full-nutrition{
     text-align: center;
     .view-full-nutrition-link{
         font-size: 1.4rem;
@@ -523,7 +517,6 @@ a{
 }
 
 // INSTRUCTION SECTION
-
 .steps {
     .singleStep{
         margin-bottom: 2rem;
@@ -565,12 +558,10 @@ a{
     }
 }
 
-.header-side-steps{
+.about-btn{
     text-align: right;
-    & a{
-        text-decoration: none;
-    }
-    .header-cook-along-btn{
+    display: inline-block;
+    &__content{
         background-color: #002684;
         border-radius: 2.8rem;
         color: #fff;
@@ -580,8 +571,6 @@ a{
         padding:1.4rem 1.9rem 1.6rem 1.4rem;
         letter-spacing:0.1rem;
         line-height: 1.6rem;
-    }
-    .source-url{
         text-transform: none;
         padding:1rem 1.5rem 1.5rem 1.5rem
     }

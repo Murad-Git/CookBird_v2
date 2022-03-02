@@ -17,8 +17,8 @@
                 <div class="container">
                     <div class="row">
                         <!-- Logo title -->
-                        <div class="col-md-3 hide-mobile mt-10 search-bar__icon">
-                            <h1 class="cookBird-title"><a class=" cookbird-href" href="/">Cookbird</a></h1>
+                        <div class="col-md-3 mt-10 search-bar__icon">
+                            <h1 class="search-bar__title"><a class=" search-bar__href" href="/">Cookbird</a></h1>
                         </div>
 
                         <!-- Options with click and Enter submit -->
@@ -26,7 +26,7 @@
                         <div class="col-md-9 col-xs-9">
                             <div class="form-group mx-sm-3 mb-2">
                                 <label for="search-btn" class="sr-only">Go</label>
-                                <input class="search-input form-control js-search-value" type="text" placeholder="Search" name="search">
+                                <input class="search-input form-control js-search-value" type="text" placeholder="Search" name="search" value="<%=query%>" autocomplete>
                             </div>
                         </div>
                         <!-- search button -->
@@ -46,16 +46,16 @@
                     <div class="row">
                         <!-- SECTION: SEARCH SIDE BAR -->
                         <section class="col-md-3 col-sm-12 cookbird-side-bar">
-                            <div class="filters">
+                            <div class="js-filters">
                                 <div class="accordion" id="filter-mealTypes">
                                     <div class="accordion-group">
-                                        <h2 class="js-filter-group">
+                                        <h2 class="js-filter-group group-items">
                                             Meal Types
                                             <button class="toggler expand"><i class="fas fa-chevron-circle-down"></i></button>
                                         </h2>
                                         <div class="accordion-body collapse-in" id="collapseOne">
                                             <div class="accordion-inner">
-                                                <ul >
+                                                <ul class="group-list">
                                                     <li ><a href="/?search=main course">Main Course</a></li>
                                                     <li ><a href="/?search=breakfast">Breakfast</a></li>
                                                     <li ><a href="/?search=soup">Soup</a></li>
@@ -76,13 +76,13 @@
                                 </div>
                                 <div class="accordion" id="filter-cuisine">
                                     <div class="accordion-group">
-                                        <h2 class="js-filter-group">
+                                        <h2 class="js-filter-group group-items">
                                             Cuisine
                                             <button class="toggler expand"><i class="fas fa-chevron-circle-down"></i></button>
                                         </h2>
                                         <div class="accordion-body collapse-in" id="collapseTwo">
                                             <div class="accordion-inner">
-                                                <ul >
+                                                <ul class="group-list">
                                                     <li ><a href="/?search=american">American</a></li>
                                                     <li ><a href="/?search=asian">Asian</a></li>
                                                     <li ><a href="/?search=british">British</a></li>
@@ -105,13 +105,13 @@
                                 </div>
                                 <div class="accordion" id="filter-diets">
                                     <div class="accordion-group">
-                                        <h2 class="js-filter-group">
+                                        <h2 class="js-filter-group group-items">
                                             Diets
                                             <button class="toggler expand"><i class="fas fa-chevron-circle-down"></i></button>
                                         </h2>
                                         <div class="accordion-body collapse-in" id="collapseOne">
                                             <div class="accordion-inner">
-                                                <ul >
+                                                <ul class="group-list">
                                                     <li ><a href="/?diet=gluten free">Gluten Free</a></li>
                                                     <li ><a href="/?diet=ketogenic">Ketogenic</a></li>
                                                     <li ><a href="/?diet=vegetarian">Vegetarian</a></li>
@@ -131,13 +131,13 @@
                                 </div>
                                 <div class="accordion" id="filter-intolerances">
                                     <div class="accordion-group">
-                                        <h2 class="js-filter-group">
+                                        <h2 class="js-filter-group group-items">
                                             Intolerances
                                             <button class="toggler expand"><i class="fas fa-chevron-circle-down"></i></button>
                                         </h2>
                                         <div class="accordion-body collapse-in" id="collapseOne">
                                             <div class="accordion-inner">
-                                                <ul>
+                                                <ul class="group-list">
                                                     <li ><a href="/?intolerances =dairy">Dairy</a></li>
                                                     <li ><a href="/?intolerances=egg">Egg</a></li>
                                                     <li ><a href="/?intolerances=gluten">Gluten</a></li>
@@ -160,22 +160,12 @@
                             </div>
                         </section>
                         <!-- SECTION: RECIPES CONTENT -->
-                        <section class="col-md-9 col-sm-12" id="cookbird-thumbs">
+                        <section class="col-md-9 col-sm-12">
                             <div class="row cookbird-thumbs-out">
  
-                                    <%recipes.forEach(recipe=>{%>
-                                        <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
-                                            <a class="recipe-anchor" href="/<%=recipe.id%>">
-                                                <div class="recipe-img-link">
-                                                    <figure>
-                                                        <img src="<%=recipe.image%>" alt="<%=recipe.title%>">
-                                                    </figure>
-                                                </div>
-                                                <h3><%=recipe.title%></h3>
-                                            </a>
-                                        </div>
-                                    <%})%>
-
+                            <!-- include header -->
+                            <%- include('partials/_recipes.ejs') %>
+                            <!-- include header -->
 
                                 </div>
                             </div>

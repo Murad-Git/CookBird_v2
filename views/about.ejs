@@ -48,7 +48,7 @@
                         <!-- Recipe description -->
                         <div class="recipe-main__description p-15">
                             <h4 class="recipe-main__description-title">From the kitchen</h4>
-                            <p class="description" itemprop="description"><%-recipe.summary%></p>
+                            <p class="recipe-description-text" itemprop="description"><%-recipe.summary%></p>
                         </div>
 
                         <!-- Nutrition Information -->
@@ -64,10 +64,10 @@
                                 </li>
                             </ul>
                             <!-- Full Nutrition button -->
-                            <div class="view-full-nutrition-container js-NutritionCalories">
+                            <div class="view-full-nutrition js-NutritionCalories">
                                 <!-- <button>                                <a class="view-full-nutrition-link" href="http://">View Full Nutrition
                                 </a></button> -->
-                                <button class="view-full-nutrition-link"><a  href="/nutrition">View Full Nutrition
+                                <button class="view-full-nutrition-link"><a  href="/<%=recipe.id%>/nutrition">View Full Nutrition
                                 </a></button>
 
                                 <!-- <span class="view-full-nutrition-link">
@@ -200,9 +200,9 @@
                         </div>
                     </div> -->
                     <!-- source URL -->
-                    <div class="col xs-4 header-side-steps small-hide">
-                        <a href="<%=recipe.originSourceUrl%>" class="steps-link js-StepLaunch header-cook-along-btn source-url">
-                            <span class="step-link-text">source url</span>
+                    <div class="col xs-4 about-btn">
+                        <a href="<%=recipe.originSourceUrl%>" class="js-StepLaunch about-btn__content">
+                            <span>source url</span>
                             <span><i class="fas fa-angle-right step-link-arrow"></i></span>
                         </a>
                     </div>

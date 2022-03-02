@@ -1,0 +1,60 @@
+// Header
+// TODO: add LOGO and styles
+.header-main{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-bottom: solid 1px #e7e6eb;
+    max-height:3rem;
+    padding: 2.7rem 0;
+    .logo{
+        display: block;
+        position: relative;
+        float: left;
+    }
+}
+
+// Footer
+.footer{
+    background-color: #fafbfc;
+    -webkit-box-shadow: inset 0 1px 0 0 #eceef2;
+    box-shadow: inset 0 1px 0 0 #eceef2;
+    color: #6a6d75;
+    overflow: hidden;
+    &-content{
+        display: flex;
+        justify-content:center;
+        padding-top: 3rem;
+    }
+    &-contact{
+        color: #303236;
+        font-style: normal;
+        font-size: 1.4rem;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__socials{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        padding-top:1rem;
+        list-style: none;
+        .social{
+            font-size: 2rem;
+            cursor: pointer;
+            color: #6a6d75;
+        }
+    }
+    &-bottom{
+        height:auto;
+        line-height: 3.2rem;
+        padding:1rem 0;
+        margin-top: 3.2rem;
+        color: #fff;
+        background-color: #0f346c;
+    }
+}

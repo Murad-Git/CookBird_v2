@@ -34,15 +34,15 @@
                 <div class="container">
                     <div class="row">
                         <!-- Logo title -->
-                        <div class="col-md-3 hide-mobile mt-10 search-bar__icon">
-                            <h1 class="cookBird-title"><a class=" cookbird-href" href="/">Cookbird</a></h1>
+                        <div class="col-md-3 mt-10 search-bar__icon">
+                            <h1 class="search-bar__title"><a class=" search-bar__href" href="/">Cookbird</a></h1>
                         </div>
 
                         <!-- Options with click and Enter submit -->
                         <form method="GET" action="/"class="form-inline col-md-9 row">
                         <div class="col-md-9 col-xs-9">
                             <div class="form-group col-md-12 col-xs-3 mb-2">
-                                <label for="search-btn" class="sr-only">Go</label>
+                                <!-- <label for="search-btn" class="sr-only">Go</label> -->
                                 <input class="search-input form-control js-search-value" type="text" placeholder="Search" name="search">
                             </div>
                         </div>
@@ -63,16 +63,16 @@
                     <div class="row">
                         <!-- SECTION: SEARCH SIDE BAR -->
                         <section class="col-md-3 col-sm-12 cookbird-side-bar">
-                            <div class="filters">
+                            <div class="js-filters">
                                 <div class="accordion" id="filter-mealTypes">
                                     <div class="accordion-group">
-                                        <h2 class="js-filter-group">
+                                        <h2 class="js-filter-group group-items">
                                             Meal Types
                                             <button class="toggler expand"><i class="fas fa-chevron-circle-down"></i></button>
                                         </h2>
                                         <div class="accordion-body collapse-in" id="collapseOne">
                                             <div class="accordion-inner">
-                                                <ul >
+                                                <ul class="group-list"  >
                                                     <li ><a href="/?search=main course">Main Course</a></li>
                                                     <li ><a href="/?search=breakfast">Breakfast</a></li>
                                                     <li ><a href="/?search=soup">Soup</a></li>
@@ -93,13 +93,13 @@
                                 </div>
                                 <div class="accordion" id="filter-cuisine">
                                     <div class="accordion-group">
-                                        <h2 class="js-filter-group">
+                                        <h2 class="js-filter-group group-items">
                                             Cuisine
                                             <button class="toggler expand"><i class="fas fa-chevron-circle-down"></i></button>
                                         </h2>
                                         <div class="accordion-body collapse-in" id="collapseTwo">
                                             <div class="accordion-inner">
-                                                <ul >
+                                                <ul class="group-list">
                                                     <li ><a href="/?search=american">American</a></li>
                                                     <li ><a href="/?search=asian">Asian</a></li>
                                                     <li ><a href="/?search=british">British</a></li>
@@ -122,13 +122,13 @@
                                 </div>
                                 <div class="accordion" id="filter-diets">
                                     <div class="accordion-group">
-                                        <h2 class="js-filter-group">
+                                        <h2 class="js-filter-group group-items">
                                             Diets
                                             <button class="toggler expand"><i class="fas fa-chevron-circle-down"></i></button>
                                         </h2>
                                         <div class="accordion-body collapse-in" id="collapseOne">
                                             <div class="accordion-inner">
-                                                <ul >
+                                                <ul class="group-list">
                                                     <li ><a href="/?diet=gluten free">Gluten Free</a></li>
                                                     <li ><a href="/?diet=ketogenic">Ketogenic</a></li>
                                                     <li ><a href="/?diet=vegetarian">Vegetarian</a></li>
@@ -148,13 +148,13 @@
                                 </div>
                                 <div class="accordion" id="filter-intolerances">
                                     <div class="accordion-group">
-                                        <h2 class="js-filter-group">
+                                        <h2 class="js-filter-group group-items">
                                             Intolerances
                                             <button class="toggler expand"><i class="fas fa-chevron-circle-down"></i></button>
                                         </h2>
                                         <div class="accordion-body collapse-in" id="collapseOne">
                                             <div class="accordion-inner">
-                                                <ul>
+                                                <ul class="group-list">
                                                     <li ><a href="/?intolerances =dairy">Dairy</a></li>
                                                     <li ><a href="/?intolerances=egg">Egg</a></li>
                                                     <li ><a href="/?intolerances=gluten">Gluten</a></li>
@@ -177,13 +177,13 @@
                             </div>
                         </section>
                         <!-- SECTION: RECIPES CONTENT -->
-                        <section class="col-md-9 col-sm-12" id="cookbird-thumbs">
+                        <section class="col-md-9 col-sm-12">
                             <div class="row cookbird-thumbs-out">
                                     <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
                                         <a class="recipe-anchor" href="#">
-                                            <div class="recipe-img-link">
+                                            <div class="recipe-anchor__link">
                                                 <figure>
-                                                    <img src="../assets/images/food-img.png" alt="">
+                                                    <img class="recipe-main-img" src="../assets/images/food-img.png" alt="">
                                                 </figure>
                                             </div>
                                             <h3>Food title</h3>
@@ -191,9 +191,119 @@
                                     </div> 
                                     <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
                                         <a class="recipe-anchor" href="#">
-                                            <div class="recipe-img-link">
+                                            <div class="recipe-anchor__link">
+                                                <figure>
+                                                    <img class="recipe-main-img" src="../assets/images/food-img.png" alt="">
+                                                </figure>
+                                            </div>
+                                            <h3>Food title</h3>
+                                        </a>
+                                    </div> 
+                                    <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
+                                        <a class="recipe-anchor" href="#">
+                                            <div class="recipe-anchor__link">
+                                                <figure>
+                                                    <img class="recipe-main-img" src="../assets/images/food-img.png" alt="">
+                                                </figure>
+                                            </div>
+                                            <h3>Food title</h3>
+                                        </a>
+                                    </div> 
+                                    <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
+                                        <a class="recipe-anchor" href="#">
+                                            <div class="recipe-anchor__link">
+                                                <figure>
+                                                    <img class="recipe-main-img" src="../assets/images/food-img.png" alt="">
+                                                </figure>
+                                            </div>
+                                            <h3>Food title</h3>
+                                        </a>
+                                    </div> 
+                                    <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
+                                        <a class="recipe-anchor" href="#">
+                                            <div class="recipe-anchor__link">
+                                                <figure>
+                                                    <img class="recipe-main-img" src="../assets/images/food-img.png" alt="">
+                                                </figure>
+                                            </div>
+                                            <h3>Food title</h3>
+                                        </a>
+                                    </div> 
+                                    <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
+                                        <a class="recipe-anchor" href="#">
+                                            <div class="recipe-anchor__link">
+                                                <figure>
+                                                    <img class="recipe-main-img" src="../assets/images/food-img.png" alt="">
+                                                </figure>
+                                            </div>
+                                            <h3>Food title</h3>
+                                        </a>
+                                    </div> 
+                                    <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
+                                        <a class="recipe-anchor" href="#">
+                                            <div class="recipe-anchor__link">
+                                                <figure>
+                                                    <img class="recipe-main-img" src="../assets/images/food-img.png" alt="">
+                                                </figure>
+                                            </div>
+                                            <h3>Food title</h3>
+                                        </a>
+                                    </div> 
+                                    <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
+                                        <a class="recipe-anchor" href="#">
+                                            <div class="recipe-anchor__link">
+                                                <figure>
+                                                    <img class="recipe-main-img" src="../assets/images/food-img.png" alt="">
+                                                </figure>
+                                            </div>
+                                            <h3>Food title</h3>
+                                        </a>
+                                    </div> 
+                                    <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
+                                        <a class="recipe-anchor" href="#">
+                                            <div class="recipe-anchor__link">
+                                                <figure>
+                                                    <img class="recipe-main-img" src="../assets/images/food-img.png" alt="">
+                                                </figure>
+                                            </div>
+                                            <h3>Food title</h3>
+                                        </a>
+                                    </div> 
+                                    <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
+                                        <a class="recipe-anchor" href="#">
+                                            <div class="recipe-anchor__link">
+                                                <figure>
+                                                    <img class="recipe-main-img" src="../assets/images/food-img.png" alt="">
+                                                </figure>
+                                            </div>
+                                            <h3>Food title</h3>
+                                        </a>
+                                    </div> 
+                                    <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
+                                        <a class="recipe-anchor" href="#">
+                                            <div class="recipe-anchor__link">
+                                                <figure>
+                                                    <img class="recipe-main-img" src="../assets/images/food-img.png" alt="">
+                                                </figure>
+                                            </div>
+                                            <h3>Food title</h3>
+                                        </a>
+                                    </div> 
+                                    <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
+                                        <a class="recipe-anchor" href="#">
+                                            <div class="recipe-anchor__link">
+                                                <figure>
+                                                    <img class="recipe-main-img" src="../assets/images/food-img.png" alt="">
+                                                </figure>
+                                            </div>
+                                            <h3>Food title</h3>
+                                        </a>
+                                    </div> 
+                                    <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
+                                        <a class="recipe-anchor" href="#">
+                                            <div class="recipe-anchor__link">
                                                 <figure >
-                                                    <img src="../assets/images/food-img.png" alt="">
+                                                    <img class="recipe-image"src="../assets/images/food-img.png" alt="">
                                                 </figure>
                                             </div>
                                             <h3>Food title</h3>
@@ -201,9 +311,9 @@
                                     </div> 
                                     <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
                                         <a class="recipe-anchor" href="#">
-                                            <div class="recipe-img-link">
+                                            <div class="recipe-anchor__link">
                                                 <figure >
-                                                    <img src="../assets/images/food-img.png" alt="">
+                                                    <img class="recipe-image"src="../assets/images/food-img.png" alt="">
                                                 </figure>
                                             </div>
                                             <h3>Food title</h3>
@@ -211,9 +321,9 @@
                                     </div> 
                                     <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
                                         <a class="recipe-anchor" href="#">
-                                            <div class="recipe-img-link">
+                                            <div class="recipe-anchor__link">
                                                 <figure >
-                                                    <img src="../assets/images/food-img.png" alt="">
+                                                    <img class="recipe-image"src="../assets/images/food-img.png" alt="">
                                                 </figure>
                                             </div>
                                             <h3>Food title</h3>
@@ -221,9 +331,9 @@
                                     </div> 
                                     <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
                                         <a class="recipe-anchor" href="#">
-                                            <div class="recipe-img-link">
+                                            <div class="recipe-anchor__link">
                                                 <figure >
-                                                    <img src="../assets/images/food-img.png" alt="">
+                                                    <img class="recipe-image"src="../assets/images/food-img.png" alt="">
                                                 </figure>
                                             </div>
                                             <h3>Food title</h3>
@@ -231,7 +341,7 @@
                                     </div> 
                                     <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
                                         <a class="recipe-anchor" href="#">
-                                            <div class="recipe-img-link">
+                                            <div class="recipe-anchor__link">
                                                 <figure >
                                                     <img class="recipe-image" src="../assets/images/food-img.png" alt="">
                                                 </figure>
@@ -241,7 +351,7 @@
                                     </div> 
                                         <!-- <div class="recipe-thumb col-md-4">
                                             <a class="recipe-anchor" href="#">
-                                                <div class="recipe-img-link">
+                                                <div class="recipe-anchor__link">
                                                     <figure>
                                                         <img src="../assets/images/food-img.png" alt="">
                                                     </figure>
@@ -251,7 +361,7 @@
                                         </div>
                                         <div class="recipe-thumb col-md-4">
                                             <a class="recipe-anchor" href="#">
-                                                <div class="recipe-img-link">
+                                                <div class="recipe-anchor__link">
                                                     <figure>
                                                         <img src="../assets/images/food-img.png" alt="">
                                                     </figure>
@@ -261,7 +371,7 @@
                                         </div>
                                         <div class="recipe-thumb col-md-4">
                                             <a class="recipe-anchor" href="#">
-                                                <div class="recipe-img-link">
+                                                <div class="recipe-anchor__link">
                                                     <figure>
                                                         <img src="../assets/images/food-img.png" alt="">
                                                     </figure>
@@ -271,7 +381,7 @@
                                         </div>
                                         <div class="recipe-thumb col-md-4">
                                             <a class="recipe-anchor" href="#">
-                                                <div class="recipe-img-link">
+                                                <div class="recipe-anchor__link">
                                                     <figure>
                                                         <img src="../assets/images/food-img.png" alt="">
                                                     </figure>
@@ -281,7 +391,7 @@
                                         </div>
                                         <div class="recipe-thumb col-md-4">
                                             <a class="recipe-anchor" href="#">
-                                                <div class="recipe-img-link">
+                                                <div class="recipe-anchor__link">
                                                     <figure>
                                                         <img src="../assets/images/food-img.png" alt="">
                                                     </figure>
@@ -291,7 +401,7 @@
                                         </div>
                                         <div class="recipe-thumb col-md-4">
                                             <a class="recipe-anchor" href="#">
-                                                <div class="recipe-img-link">
+                                                <div class="recipe-anchor__link">
                                                     <figure>
                                                         <img src="../assets/images/food-img.png" alt="">
                                                     </figure>
@@ -304,7 +414,7 @@
                                 </div>
                             </div>
                             <!-- loading more recipes pointer -->
-                            <div class="load-more text-center"></div>
+                            <div class="js-load-more text-center"></div>
                             <!-- more recipe loader button -->
                             <div class="load-wrap hide" id="js-cookbird-loader"></div>                  
                         </section>
@@ -319,9 +429,9 @@
     </div>
     <footer class="footer">
         <div class="container footer-content">
-            <div class="col-md-3 col-sm-12 contact-field row-fluid">
+            <div class="col-lg-6 col-sm-12 contact-field row-fluid">
                 <h3 class="display-5 footer-contact">Contact me</h3>
-                <ul class="socials">
+                <ul class="footer__socials">
                     <li><i class="fab fa-facebook-f social"></i></li>
                     <li><i class="fab fa-twitter social"></i></li>
                     <li><i class="fab fa-instagram social"></i></li>
