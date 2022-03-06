@@ -22,9 +22,7 @@ $bp-medium: 766px; // 766px
 html{
     box-sizing: border-box;
     font-size: 10px;
-    @media only screen and (max-width: $bp-medium) {
-        font-size: 60%;
-    }
+
 }
 body{
     margin: 0;
@@ -36,6 +34,9 @@ body{
     font-weight: 400;
     line-height: 2.4rem;
     color: #6a6d75;
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 60%;
+    }
 }
 h1{
     font-family: 'Inter', sans-serif;

@@ -1,13 +1,11 @@
 // import async from 'regenerator-runtime';
-// import axios from 'axios';
-// const async = require('async');
-// const axios = require('axios');
+
 import axios from 'axios';
-// import axios from '../../node_modules/axios/index.d.ts';
 
 // const key = config.API_KEY;
 // 1 API keys=8e77d79b100d4bde9448e79d8987c92d
 // 2 API keys=8dd25d27a6fb41f28a3a830fe78fae94
+// 3 API keys=c702c0d3e87142f2a528e780d52092a2
 
 // state
 const state = {
@@ -176,7 +174,7 @@ export async function loadRecipe(id){
     try {
         const request = await axios({
             method: "GET",
-            url: `https://api.spoonacular.com/recipes/${id}/information?apiKey=8dd25d27a6fb41f28a3a830fe78fae94`,
+            url: `https://api.spoonacular.com/recipes/${id}/information?apiKey=c702c0d3e87142f2a528e780d52092a2`,
         });
         // console.log(request.data);
         state.recipe = createRecipeObject(request);
@@ -198,7 +196,7 @@ export async function getRandomRecipes(){
     try {
         const request = await axios({
             method: 'GET',
-            url: `https://api.spoonacular.com/recipes/random?number=${state.search.resultsPerPage}&apiKey=8dd25d27a6fb41f28a3a830fe78fae94`
+            url: `https://api.spoonacular.com/recipes/random?number=${state.search.resultsPerPage}&apiKey=c702c0d3e87142f2a528e780d52092a2`
         });
         if(request.status == 200) console.log(`status: ${request.status}, data: ${request.data}`);
 
@@ -218,16 +216,12 @@ export async function getRandomRecipes(){
     }
 }
 
-export async function loadAllSearch(query){
+export async function loadAllSearch(query, offset=0){
     try{
         state.search.query = query
-        // const request = await axios({
-        //   method: "GET",
-        //   url: `https://api.spoonacular.com/recipes/complexSearch?diet=ketogenic&number=${state.search.resultsPerPage}&apiKey=8dd25d27a6fb41f28a3a830fe78fae94`,
-        // });
         const request = await axios({
           method: "GET",
-          url: `https://api.spoonacular.com/recipes/complexSearch?query=${query}&number=${state.search.resultsPerPage}&apiKey=8dd25d27a6fb41f28a3a830fe78fae94`,
+          url: `https://api.spoonacular.com/recipes/complexSearch?query=${query}&number=${state.search.resultsPerPage}&offset=${offset}&apiKey=c702c0d3e87142f2a528e780d52092a2`,
         });
 
         // status check
@@ -259,7 +253,7 @@ export async function loadNutrition(id){
       console.log(`ID received in model: ${id}`);
       const request = await axios({
         method: "GET",
-        url: `https://api.spoonacular.com/recipes/${id}/nutritionLabel?apiKey=8dd25d27a6fb41f28a3a830fe78fae94`,
+        url: `https://api.spoonacular.com/recipes/${id}/nutritionLabel?apiKey=c702c0d3e87142f2a528e780d52092a2`,
     });
 
       // status check

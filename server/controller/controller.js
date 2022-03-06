@@ -60,12 +60,12 @@
 import { loadAllSearch, loadRenderResults, getRandomRecipes, loadRecipe, loadNutrition } from '../model/model.js';
 
 // search recipe by query or get random recieps
-export const loadSearch = async function(query){
+export const loadSearch = async function(query, offset){
     try {
         if(query){
-            console.log(`query recieved in controller: ${query}`);
+            console.log(`query and offset recieved in controller: ${query}//${offset}`);
             // search recipes by querystring
-            await loadAllSearch(query);
+            await loadAllSearch(query, offset);
 
             // render resultsPerPage
             const data = loadRenderResults();

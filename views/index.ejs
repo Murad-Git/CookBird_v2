@@ -49,12 +49,12 @@
                             <div class="js-filters">
                                 <div class="accordion" id="filter-mealTypes">
                                     <div class="accordion-group">
-                                        <h2 class="js-filter-group group-items">
+                                        <h2 class="js-filter-group group-items" data-bs-toggle="collapse" href="#filterCollapse-meal" aria-expanded="false" aria-controls="filterCollapse-meal">
                                             Meal Types
                                             <button class="toggler expand"><i class="fas fa-chevron-circle-down"></i></button>
                                         </h2>
-                                        <div class="accordion-body collapse-in" id="collapseOne">
-                                            <div class="accordion-inner">
+                                        <div class="accordion-body collapse-in">
+                                            <div class="accordion-inner collapse show" id="filterCollapse-meal">
                                                 <ul class="group-list">
                                                     <li ><a href="/?search=main course">Main Course</a></li>
                                                     <li ><a href="/?search=breakfast">Breakfast</a></li>
@@ -63,54 +63,54 @@
                                                     <li ><a href="/?search=snack">Snack</a></li>
                                                     <li ><a href="/?search=dessert">Dessert</a></li>
                                                     <li ><a href="/?search=Beverage">Beverage</a></li>
-                                                    <li class="cousine-more hide"><a href="/?search=appetizer">Appetizer</a></li>
-                                                    <li class="cousine-more hide"><a href="/?search=marinade">Marinade</a></li>
-                                                    <li class="cousine-more hide"><a href="/?search=drink">Drink</a></li>
-                                                    <li class="cousine-more hide"><a href="/?search=bread">Bread</a></li>
-                                                    <li class="cousine-more hide"><a href="/?search=sauce">Sauce</a></li>
+                                                    <li class="collapse" id="seeMore-meal"><a href="/?search=appetizer">Appetizer</a></li>
+                                                    <li class="collapse" id="seeMore-meal"><a href="/?search=marinade">Marinade</a></li>
+                                                    <li class="collapse" id="seeMore-meal"><a href="/?search=drink">Drink</a></li>
+                                                    <li class="collapse" id="seeMore-meal"><a href="/?search=bread">Bread</a></li>
+                                                    <li class="collapse" id="seeMore-meal"><a href="/?search=sauce">Sauce</a></li>
                                                 </ul>
-                                                <a class="filter-more js-see-more-btn" data-tag="mealTypes" data-toggle="more">see more</a>
+                                                <a class="filter-more js-see-more-btn" data-bs-toggle="collapse" href="#seeMore-meal" aria-expanded="false" aria-controls="seeMore-meal">see more</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion" id="filter-cuisine">
                                     <div class="accordion-group">
-                                        <h2 class="js-filter-group group-items">
+                                        <h2 class="js-filter-group group-items" data-bs-toggle="collapse" href="#filterCollapse-cuisine" aria-expanded="false" aria-controls="filterCollapse-cuisine">
                                             Cuisine
                                             <button class="toggler expand"><i class="fas fa-chevron-circle-down"></i></button>
                                         </h2>
                                         <div class="accordion-body collapse-in" id="collapseTwo">
-                                            <div class="accordion-inner">
+                                            <div class="accordion-inner collapse show" id="filterCollapse-cuisine">
                                                 <ul class="group-list">
                                                     <li ><a href="/?search=american">American</a></li>
                                                     <li ><a href="/?search=asian">Asian</a></li>
                                                     <li ><a href="/?search=british">British</a></li>
                                                     <li ><a href="/?search=european">European</a></li>
                                                     <li ><a href="/?search=mediterranean">Mediterranean</a></li>
-                                                    <li class="cousine-more hide"><a href="/?search=african">African</a></li>
-                                                    <li class="cousine-more hide"><a href="/?search=indian">Indian</a></li>
-                                                    <li class="cousine-more hide"><a href="/?search=italian">Italian</a></li>
-                                                    <li class="cousine-more hide"><a href="/?search=spanish">Spanish</a></li>
-                                                    <li class="cousine-more hide"><a href="/?search=french">French</a></li>
-                                                    <li class="cousine-more hide"><a href="/?search=chinese">Chinese</a></li>
-                                                    <li class="cousine-more hide"><a href="/?search=japanese">Japanese</a></li>
-                                                    <li class="cousine-more hide"><a href="/?search=vietnamese">Vietnamese</a></li>
-                                                    <li class="cousine-more hide"><a href="/?search=thai">Thai</a></li>
+                                                    <li class="collapse" id="seeMore-cusine"><a href="/?search=african">African</a></li>
+                                                    <li class="collapse" id="seeMore-cusine"><a href="/?search=indian">Indian</a></li>
+                                                    <li class="collapse" id="seeMore-cusine"><a href="/?search=italian">Italian</a></li>
+                                                    <li class="collapse" id="seeMore-cusine"><a href="/?search=spanish">Spanish</a></li>
+                                                    <li class="collapse" id="seeMore-cusine"><a href="/?search=french">French</a></li>
+                                                    <li class="collapse" id="seeMore-cusine"><a href="/?search=chinese">Chinese</a></li>
+                                                    <li class="collapse" id="seeMore-cusine"><a href="/?search=japanese">Japanese</a></li>
+                                                    <li class="collapse" id="seeMore-cusine"><a href="/?search=vietnamese">Vietnamese</a></li>
+                                                    <li class="collapse" id="seeMore-cusine"><a href="/?search=thai">Thai</a></li>
                                                 </ul>
-                                                <a class="filter-more js-see-more-btn" data-tag="cuisine" data-toggle="more">see more</a>
+                                                <a class="filter-more js-see-more-btn" data-bs-toggle="collapse" href="#seeMore-cusine" aria-expanded="false" aria-controls="seeMore-cusine">see more</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion" id="filter-diets">
                                     <div class="accordion-group">
-                                        <h2 class="js-filter-group group-items">
+                                        <h2 class="js-filter-group group-items" data-bs-toggle="collapse" href="#filterCollapse-diets" aria-expanded="false" aria-controls="filterCollapse-diets">
                                             Diets
                                             <button class="toggler expand"><i class="fas fa-chevron-circle-down"></i></button>
                                         </h2>
-                                        <div class="accordion-body collapse-in" id="collapseOne">
-                                            <div class="accordion-inner">
+                                        <div class="accordion-body collapse-in">
+                                            <div class="accordion-inner collapse show" id="filterCollapse-diets">
                                                 <ul class="group-list">
                                                     <li ><a href="/?diet=gluten free">Gluten Free</a></li>
                                                     <li ><a href="/?diet=ketogenic">Ketogenic</a></li>
@@ -118,25 +118,25 @@
                                                     <li ><a href="/?diet=lacto-vegetarian">Lacto-Vegetarian</a></li>
                                                     <li ><a href="/?diet=ovo-vegetarian">Ovo-Vegetarian</a></li>
                                                     <li ><a href="/?diet=vegan">Vegan</a></li>
-                                                    <li class="cousine-more hide"><a href="/?diet=pescetarian">Pescetarian</a></li>
-                                                    <li class="cousine-more hide"><a href="/?diet=paleo">Paleo</a></li>
-                                                    <li class="cousine-more hide"><a href="/?diet=primal">Primal</a></li>
-                                                    <li class="cousine-more hide"><a href="/?diet=low fodmap">Low FODMAP</a></li>
-                                                    <li class="cousine-more hide"><a href="/?diet=whole30">Whole30</a></li>
+                                                    <li class="collapse" id="seeMore-diets"><a href="/?diet=pescetarian">Pescetarian</a></li>
+                                                    <li class="collapse" id="seeMore-diets"><a href="/?diet=paleo">Paleo</a></li>
+                                                    <li class="collapse" id="seeMore-diets"><a href="/?diet=primal">Primal</a></li>
+                                                    <li class="collapse" id="seeMore-diets"><a href="/?diet=low fodmap">Low FODMAP</a></li>
+                                                    <li class="collapse" id="seeMore-diets"><a href="/?diet=whole30">Whole30</a></li>
                                                 </ul>
-                                                <a class="filter-more js-see-more-btn" data-tag="diets" data-toggle="more">see more</a>
+                                                <a class="filter-more js-see-more-btn" data-bs-toggle="collapse" href="#seeMore-diets" aria-expanded="false" aria-controls="seeMore-diets">see more</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion" id="filter-intolerances">
                                     <div class="accordion-group">
-                                        <h2 class="js-filter-group group-items">
+                                        <h2 class="js-filter-group group-items" data-bs-toggle="collapse" href="#filterCollapse-intolerances" aria-expanded="false" aria-controls="filterCollapse-intolerances">
                                             Intolerances
                                             <button class="toggler expand"><i class="fas fa-chevron-circle-down"></i></button>
                                         </h2>
                                         <div class="accordion-body collapse-in" id="collapseOne">
-                                            <div class="accordion-inner">
+                                            <div class="accordion-inner collapse show" id="filterCollapse-intolerances">
                                                 <ul class="group-list">
                                                     <li ><a href="/?intolerances =dairy">Dairy</a></li>
                                                     <li ><a href="/?intolerances=egg">Egg</a></li>
@@ -144,15 +144,15 @@
                                                     <li ><a href="/?intolerances=grain">Grain</a></li>
                                                     <li ><a href="/?intolerances=peanut">Peanut</a></li>
                                                     <li ><a href="/?intolerances=seafood">Seafood</a></li>
-                                                    <li class="cousine-more hide"><a href="/?intolerances=sesame">Sesame</a></li>
-                                                    <li class="cousine-more hide"><a href="/?intolerances=shellfish">Shellfish</a></li>
-                                                    <li class="cousine-more hide"><a href="/?intolerances=soy">Soy</a></li>
-                                                    <li class="cousine-more hide"><a href="/?intolerances=sulfite">Sulfite</a></li>
-                                                    <li class="cousine-more hide"><a href="/?intolerances=tree nut">Tree Nut</a></li>
-                                                    <li class="cousine-more hide"><a href="/?intolerances=sulfite">Sulfite</a></li>
-                                                    <li class="cousine-more hide"><a href="/?intolerances=wheat">Wheat</a></li>
+                                                    <li class="collapse" id="seeMore-intolerances"><a href="/?intolerances=sesame">Sesame</a></li>
+                                                    <li class="collapse" id="seeMore-intolerances"><a href="/?intolerances=shellfish">Shellfish</a></li>
+                                                    <li class="collapse" id="seeMore-intolerances"><a href="/?intolerances=soy">Soy</a></li>
+                                                    <li class="collapse" id="seeMore-intolerances"><a href="/?intolerances=sulfite">Sulfite</a></li>
+                                                    <li class="collapse" id="seeMore-intolerances"><a href="/?intolerances=tree nut">Tree Nut</a></li>
+                                                    <li class="collapse" id="seeMore-intolerances"><a href="/?intolerances=sulfite">Sulfite</a></li>
+                                                    <li class="collapse" id="seeMore-intolerances"><a href="/?intolerances=wheat">Wheat</a></li>
                                                 </ul>
-                                                <a class="filter-more js-see-more-btn" data-tag="intolerances" data-toggle="more">see more</a>
+                                                <a class="filter-more js-see-more-btn" data-bs-toggle="collapse" href="#seeMore-intolerances" aria-expanded="false" aria-controls="seeMore-intolerances">see more</a>
                                             </div>
                                         </div>
                                     </div>
@@ -163,14 +163,23 @@
                         <section class="col-md-9 col-sm-12">
                             <div class="row cookbird-thumbs-out">
  
-                            <!-- include header -->
-                            <%- include('partials/_recipes.ejs') %>
-                            <!-- include header -->
+                                <%recipes.forEach(recipe=>{%>
+                                    <div class="recipe-thumb col-lg-4 col-md-6 col-xs-12">
+                                        <a class="recipe-anchor" href="/<%=recipe.id%>">
+                                            <div class="recipe-anchor__link">
+                                                <figure>
+                                                    <img class="recipe-main-img" src="<%=recipe.image%>" alt="<%=recipe.title%>">
+                                                </figure>
+                                            </div>
+                                            <h3><%=recipe.title%></h3>
+                                        </a>
+                                    </div>
+                                <%})%>
 
                                 </div>
                             </div>
                             <!-- loading more recipes pointer -->
-                            <div class="load-more text-center"></div>
+                            <div class="js-load-more text-center"></div>
                             <!-- more recipe loader button -->
                             <div class="load-wrap hide" id="js-cookbird-loader"></div>                  
                         </section>
@@ -187,5 +196,3 @@
 <!-- include footer -->
 <%- include('partials/_footer.ejs') %>
 <!-- include footer -->
-</body>
-</html>

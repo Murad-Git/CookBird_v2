@@ -14,7 +14,8 @@
     }
     &__title{
         font-size: 2.4rem;
-        font: inherit;
+        font-family: inherit;
+        font-weight: 600;
     }
     &__href{
         text-decoration: none;
@@ -36,16 +37,44 @@
 
     }
 }
+// autocomplete
+.search-auto-items{
+    width:76rem;
+    position: absolute;
+    z-index: 9999;
+    text-align: left;
+    background-color:#fff;
+    border: 1px solid #d3d5db;
+    .search-auto-item{
+        overflow: hidden;
+        border-bottom: solid 1px #e4e6eb;
+        cursor: pointer;
+        line-height: 1.2;
+        max-height: 4rem;
+        padding:1rem;
+        .image{
+            margin-right: 1rem;
+            & img{
+                max-height: 4rem;
+                vertical-align: bottom;
+            }
+        }
+        .label{
+            color: #0f346c;
+            font-size: 1.6rem;
+        }
+    }
 
+}
 // contener to margin content
 .container-in{
     margin:3rem 0;
 }
 
 // SECTION: SEARCH SIDE BAR
-.cookbird-side-bar{
-    width:20%;
-}
+// .cookbird-side-bar{
+//     width:20%;
+// }
 .accordion{
     border-top: solid 1px #d3d5db;
     &:last-child{
@@ -82,6 +111,9 @@
 }
 
 // SECTION: RECIPES content
+.recipe-thumb{
+    margin-bottom: 2rem;
+}
 .recipe-anchor{
     text-decoration: none;
     color: #0f346c;

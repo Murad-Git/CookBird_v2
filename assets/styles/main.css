@@ -287,6 +287,11 @@
     max-width: 75rem;
   }
 }
+@media screen and (max-width: 715px) {
+  .frame-border {
+    width: 50%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -302,11 +307,6 @@ html {
   box-sizing: border-box;
   font-size: 10px;
 }
-@media only screen and (max-width: 766px) {
-  html {
-    font-size: 60%;
-  }
-}
 
 body {
   margin: 0;
@@ -318,6 +318,11 @@ body {
   font-weight: 400;
   line-height: 2.4rem;
   color: #6a6d75;
+}
+@media only screen and (max-width: 766px) {
+  body {
+    font-size: 60%;
+  }
 }
 
 h1 {
@@ -693,7 +698,7 @@ a {
   line-height: 1.5;
   font-size: 1rem;
 }
-.modal .frame-border .frame__close-btn {
+.modal .frame-border .modal__close-btn {
   cursor: pointer;
   position: absolute;
   top: 1rem;
@@ -720,7 +725,8 @@ a {
 }
 .search-bar__title {
   font-size: 2.4rem;
-  font: inherit;
+  font-family: inherit;
+  font-weight: 600;
 }
 .search-bar__href {
   text-decoration: none;
@@ -742,12 +748,36 @@ a {
   overflow-wrap: normal;
 }
 
-.container-in {
-  margin: 3rem 0;
+.search-auto-items {
+  width: 76rem;
+  position: absolute;
+  z-index: 9999;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #d3d5db;
+}
+.search-auto-items .search-auto-item {
+  overflow: hidden;
+  border-bottom: solid 1px #e4e6eb;
+  cursor: pointer;
+  line-height: 1.2;
+  max-height: 4rem;
+  padding: 1rem;
+}
+.search-auto-items .search-auto-item .image {
+  margin-right: 1rem;
+}
+.search-auto-items .search-auto-item .image img {
+  max-height: 4rem;
+  vertical-align: bottom;
+}
+.search-auto-items .search-auto-item .label {
+  color: #0f346c;
+  font-size: 1.6rem;
 }
 
-.cookbird-side-bar {
-  width: 20%;
+.container-in {
+  margin: 3rem 0;
 }
 
 .accordion {
@@ -782,6 +812,10 @@ a {
 }
 .accordion-body {
   padding: 0 0 0 1rem;
+}
+
+.recipe-thumb {
+  margin-bottom: 2rem;
 }
 
 .recipe-anchor {

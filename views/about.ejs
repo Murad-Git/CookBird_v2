@@ -35,9 +35,6 @@
 
                         <!-- servings and pricing-->
                         <div class="cb-recipe-details">
-                            <%if(recipe.pricePerServings){%>
-                                <span class="cb-recipe-details__price">$<%=recipe.pricePerServings%>/serving</span>
-                            <%}%>
                             <span class="cb-recipe--detail cb-recipe-details__servings" itemprop="recipeYield"><%=recipe.servings%> Servings</span>
                         </div>
 
@@ -200,12 +197,15 @@
                         </div>
                     </div> -->
                     <!-- source URL -->
-                    <div class="col xs-4 about-btn">
-                        <a href="<%=recipe.originSourceUrl%>" class="js-StepLaunch about-btn__content">
-                            <span>source url</span>
-                            <span><i class="fas fa-angle-right step-link-arrow"></i></span>
-                        </a>
-                    </div>
+                    <%if(recipe.originSourceUrl){%>
+                        <div class="col xs-4 about-btn">
+                            <a href="<%=recipe.originSourceUrl%>" class="js-StepLaunch about-btn__content">
+                                <span>source url</span>
+                                <span><i class="fas fa-angle-right step-link-arrow"></i></span>
+                            </a>
+                        </div>
+                    <%}%>
+
                 </section>
             </div>
             <div class="back-top" data-role="scroll-top">
@@ -215,8 +215,5 @@
     </div>
 
 <!-- include footer -->
-<%- include('partials/_footer.ejs') %>
+<%- include('partials/_footerAbout.ejs') %>
 <!-- include footer -->
-
-</body>
-</html>
