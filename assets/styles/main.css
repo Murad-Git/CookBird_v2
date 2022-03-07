@@ -749,23 +749,29 @@ a {
 }
 
 .search-auto-items {
-  width: 76rem;
+  display: block;
+  width: 71.5rem;
   position: absolute;
   z-index: 9999;
-  text-align: left;
   background-color: #fff;
   border: 1px solid #d3d5db;
+  padding: 0;
 }
 .search-auto-items .search-auto-item {
   overflow: hidden;
   border-bottom: solid 1px #e4e6eb;
   cursor: pointer;
   line-height: 1.2;
-  max-height: 4rem;
+  max-height: 7rem;
+}
+.search-auto-items .search-auto-item .search-element {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   padding: 1rem;
 }
 .search-auto-items .search-auto-item .image {
-  margin-right: 1rem;
+  margin: 0;
 }
 .search-auto-items .search-auto-item .image img {
   max-height: 4rem;
@@ -774,6 +780,7 @@ a {
 .search-auto-items .search-auto-item .label {
   color: #0f346c;
   font-size: 1.6rem;
+  margin: 0 0 0 1rem;
 }
 
 .container-in {

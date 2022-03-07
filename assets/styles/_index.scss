@@ -39,21 +39,28 @@
 }
 // autocomplete
 .search-auto-items{
-    width:76rem;
+    display: block;
+    width:71.5rem;
     position: absolute;
     z-index: 9999;
-    text-align: left;
+    // text-align: left;
     background-color:#fff;
     border: 1px solid #d3d5db;
+    padding: 0;
     .search-auto-item{
         overflow: hidden;
         border-bottom: solid 1px #e4e6eb;
         cursor: pointer;
         line-height: 1.2;
-        max-height: 4rem;
-        padding:1rem;
+        max-height: 7rem;
+        .search-element{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding:1rem;
+        }
         .image{
-            margin-right: 1rem;
+            margin: 0;
             & img{
                 max-height: 4rem;
                 vertical-align: bottom;
@@ -62,6 +69,7 @@
         .label{
             color: #0f346c;
             font-size: 1.6rem;
+            margin: 0 0 0 1rem;
         }
     }
 

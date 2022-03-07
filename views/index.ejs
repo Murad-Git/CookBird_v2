@@ -27,6 +27,7 @@
                             <div class="form-group mx-sm-3 mb-2">
                                 <label for="search-btn" class="sr-only">Go</label>
                                 <input class="search-input form-control js-search-value" type="text" placeholder="Search" name="search" value="<%=query%>" autocomplete>
+                                <ul class="search-auto-items js-autocomplete-parent">
                             </div>
                         </div>
                         <!-- search button -->
@@ -138,7 +139,7 @@
                                         <div class="accordion-body collapse-in" id="collapseOne">
                                             <div class="accordion-inner collapse show" id="filterCollapse-intolerances">
                                                 <ul class="group-list">
-                                                    <li ><a href="/?intolerances =dairy">Dairy</a></li>
+                                                    <li ><a href="/?intolerances=dairy">Dairy</a></li>
                                                     <li ><a href="/?intolerances=egg">Egg</a></li>
                                                     <li ><a href="/?intolerances=gluten">Gluten</a></li>
                                                     <li ><a href="/?intolerances=grain">Grain</a></li>
