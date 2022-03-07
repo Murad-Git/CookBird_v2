@@ -65,11 +65,9 @@ const scrollListener  = function(){
             }     
         }
         function secondaryFunction(){
-            setTimeout(() => {
-                firstFunction(function() {
-                    console.log(`I'm done`);
-                });
-            }, 3000);
+            firstFunction(function() {
+                console.log(`I'm done`);
+            });
         }
         secondaryFunction();
     }
@@ -79,7 +77,7 @@ const scrollListener  = function(){
     // }
 };
 
-const throttledListener = throttle(scrollListener, 300);
+const throttledListener = throttle(scrollListener, 2000);
 window.addEventListener('scroll', throttledListener);
 
 function throttle(func, delay) { // allows [func] to run once every [delay] ms
@@ -110,9 +108,9 @@ document.querySelector('.search-bar').addEventListener('click', function(e){
 
 // Media queries
 // collaps
-const mediaQuery = window.matchMedia("(max-width: 766px)");
+const mediaQuery768 = window.matchMedia("(max-width: 768px)");
 
-function handleTabletChange(e) {
+const handleTabletChange =function(e){
     if(e.matches){
         document.querySelectorAll('.accordion-inner').forEach(collapsDiv=>{
         collapsDiv.classList.remove('show');
@@ -120,10 +118,11 @@ function handleTabletChange(e) {
     }else{
         document.querySelectorAll('.accordion-inner').forEach(collapsDiv=>{
         collapsDiv.classList.add('show');
-        })
-}}
-mediaQuery.addEventListener('change',handleTabletChange);
-handleTabletChange(mediaQuery);
+        });
+}};
+
+mediaQuery768.addEventListener('change',handleTabletChange);
+handleTabletChange(mediaQuery768);
 
 const searchRecipes = async function (query, offset){
     try {
@@ -181,7 +180,7 @@ const searchAutocomplete = async function(query){
                 image:`https://spoonacular.com/recipeImages/${rec.id}-636x393.jpg`
             }
         });
-        console.log(results);
+        // console.log(results);
         const html = results.map(result => searchHtml(result)).join('');
         return html
     } catch (error) {

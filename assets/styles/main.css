@@ -356,55 +356,7 @@ a {
   min-height: 100%;
 }
 
-@media screen and (max-width: 992px) {
-  .recipe-main-container {
-    max-width: 75rem;
-  }
-}
-@media screen and (min-width: 962px) {
-  .section-recipe {
-    margin-top: 1.5rem;
-    padding-right: 0;
-    padding-left: 0;
-    padding-bottom: 5.6rem;
-  }
-
-  .section-recipe.recipe-main {
-    margin-top: 2.5rem;
-    padding-bottom: 5.6rem;
-  }
-
-  .section-recipe .cb-hero-image {
-    margin-bottom: 3rem;
-  }
-
-  .non-story {
-    padding: 0.4rem 0;
-    color: #0f346c;
-  }
-
-  .step-title-holder {
-    margin-top: 1rem;
-  }
-
-  .recipeInstructions {
-    padding: 0;
-  }
-
-  .section-recipe {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .recipe-wine {
-    margin-bottom: 2rem;
-  }
-
-  .recipe-main-container {
-    overflow: inherit;
-  }
-}
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 768px) {
   .row {
     margin: 0;
   }
@@ -750,7 +702,7 @@ a {
 
 .search-auto-items {
   display: block;
-  width: 71.5rem;
+  width: 694.25px;
   position: absolute;
   z-index: 9999;
   background-color: #fff;
@@ -853,6 +805,40 @@ a {
   -moz-outline-radius: 25px;
 }
 
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .search-auto-items {
+    width: 593px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .search-auto-items {
+    width: 491.75px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .search-auto-items {
+    width: 356.75px;
+  }
+  .search-auto-items .search-auto-item .search-element {
+    padding: 0.5rem;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .search-auto-items {
+    width: 473px;
+  }
+  .search-auto-items .search-auto-item .search-element {
+    padding: 0.5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .search-auto-items {
+    width: 523px;
+  }
+  .search-auto-items .search-auto-item .search-element {
+    padding: 0.5rem;
+  }
+}
 .header-main {
   display: flex;
   align-items: center;

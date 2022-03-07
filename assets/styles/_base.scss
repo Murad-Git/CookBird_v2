@@ -70,58 +70,56 @@ a{
 
 
 // Media queries
-@media screen and (max-width: 992px){
-    // about page
-    .recipe-main-container{
-        max-width: 75rem;
-    }
-};
+// @media screen and (max-width:) {
+    
+// }
 
-@media screen and (min-width: 962px){
-    // MAIN RECIPE SECTION
-    .section-recipe{
-        margin-top: 1.5rem;
-        padding-right: 0;
-        padding-left:0;
-        padding-bottom: 5.6rem;
-    }
-    .section-recipe.recipe-main{
-        margin-top: 2.5rem;
-        padding-bottom: 5.6rem;
-    }
-    .section-recipe .cb-hero-image{
-        margin-bottom: 3rem;
 
-    }
+// @media screen and (min-width: 962px){
+//     // MAIN RECIPE SECTION
+//     .section-recipe{
+//         margin-top: 1.5rem;
+//         padding-right: 0;
+//         padding-left:0;
+//         padding-bottom: 5.6rem;
+//     }
+//     .section-recipe.recipe-main{
+//         margin-top: 2.5rem;
+//         padding-bottom: 5.6rem;
+//     }
+//     .section-recipe .cb-hero-image{
+//         margin-bottom: 3rem;
 
-    // INGREDIENTS SECTION
-    .non-story{
-        padding: 0.4rem 0;
-        color: #0f346c;
-    }
-    .step-title-holder{
-        margin-top: 1rem;
-    }
-    .recipeInstructions{
-        padding: 0;
-    }
+//     }
 
-    // RECIPE PAGE (ABOUT.HTML)
-    .section-recipe{
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-    }
+//     // INGREDIENTS SECTION
+//     .non-story{
+//         padding: 0.4rem 0;
+//         color: #0f346c;
+//     }
+//     .step-title-holder{
+//         margin-top: 1rem;
+//     }
+//     .recipeInstructions{
+//         padding: 0;
+//     }
 
-    .recipe-wine{
-        margin-bottom: 2rem;
-    }
-    .recipe-main-container{
-        overflow: inherit;
+//     // RECIPE PAGE (ABOUT.HTML)
+//     .section-recipe{
+//         margin-top: 1rem;
+//         margin-bottom: 2rem;
+//     }
 
-    }
-}
+//     .recipe-wine{
+//         margin-bottom: 2rem;
+//     }
+//     .recipe-main-container{
+//         overflow: inherit;
 
-@media screen and (max-width: 766px) {
+//     }
+// }
+
+@media screen and (max-width: 768px) {
     .row{
         margin: 0;
     }
