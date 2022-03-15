@@ -40,7 +40,7 @@
 // autocomplete
 .search-auto-items{
     display: block;
-    width:694.25px;
+    width:714.25px;
     position: absolute;
     z-index: 9999;
     // text-align: left;
@@ -153,17 +153,17 @@
 
 @media screen and (min-width: 1200px) and (max-width:1400px){
     .search-auto-items{
-        width:593px;
+        width:613px;
     }
 };
 @media screen and (min-width: 992px) and (max-width: 1200px){
     .search-auto-items{
-        width:491.75px;
+        width:511.75px;
     }
 };
 @media screen and (min-width: 768px) and (max-width: 992px){
     .search-auto-items{
-        width:356.75px;
+        width:376.75px;
         .search-auto-item .search-element{
             padding: 0.5rem;
         }
@@ -171,7 +171,7 @@
 };
 @media screen and (min-width: 576px) and (max-width: 768px){
     .search-auto-items{
-        width:473px;
+        width:493px;
         .search-auto-item .search-element{
             padding: 0.5rem;
         }
@@ -184,7 +184,7 @@
 // };
 @media screen and (max-width: 576px){
     .search-auto-items{
-        width:523px;
+        width:543px;
         .search-auto-item .search-element{
             padding: 0.5rem;
         }

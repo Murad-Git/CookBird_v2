@@ -7,7 +7,7 @@
         <!-- LOGO -->
         <header class= "header-main">
             <div class="container">
-                <a href="/" class="logo">Logo</a>
+                <a href="/" class="logo"><img class="logo__img" src="img/bird_alone_icon.png" alt="logo-img"></a>
             </div>
         </header>
         <!-- SECTION: RECIPE HERO -->
@@ -38,10 +38,6 @@
                             <span class="cb-recipe--detail cb-recipe-details__servings" itemprop="recipeYield"><%=recipe.servings%> Servings</span>
                         </div>
 
-                        <!-- <div class="p-15 hide" >
-                            wellness recomendation
-                        </div> -->
-
                         <!-- Recipe description -->
                         <div class="recipe-main__description p-15">
                             <h4 class="recipe-main__description-title">From the kitchen</h4>
@@ -62,14 +58,8 @@
                             </ul>
                             <!-- Full Nutrition button -->
                             <div class="view-full-nutrition js-NutritionCalories">
-                                <!-- <button>                                <a class="view-full-nutrition-link" href="http://">View Full Nutrition
-                                </a></button> -->
                                 <button class="view-full-nutrition-link"><a  href="/<%=recipe.id%>/nutrition">View Full Nutrition
                                 </a></button>
-
-                                <!-- <span class="view-full-nutrition-link">
-                                    View Full Nutrition
-                                </span> -->
                             </div>
                         </div>
                         <!-- Wine pairing -->
@@ -183,7 +173,7 @@
                             <div class="col-md-6 col-xs-12 singleStep">
                                 <div class="recipeInstructions">
                                     <div class="step-txt">
-                                        <p>Sorry, could not find any instructions</p>
+                                        <p>There is no instruction for this recipe</p>
                                     </div>
                                 </div>
                             </div>
@@ -199,7 +189,7 @@
                     <!-- source URL -->
                     <%if(recipe.originSourceUrl){%>
                         <div class="col xs-4 about-btn">
-                            <a href="<%=recipe.originSourceUrl%>" class="js-StepLaunch about-btn__content">
+                            <a target="_blank" href="<%=recipe.originSourceUrl%>" class="js-StepLaunch about-btn__content">
                                 <span>source url</span>
                                 <span><i class="fas fa-angle-right step-link-arrow"></i></span>
                             </a>

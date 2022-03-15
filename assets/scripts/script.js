@@ -3,11 +3,16 @@
 const backTopBtn = document.querySelector('.back-top');
 
 const state = {
-    offset:6,
+    offset:10,
     search:{
         query:'',
         results:[],
         resultsPerPage:6,
+    },
+    keys:{
+        key1:'8e77d79b100d4bde9448e79d8987c92d',
+        key2:'8dd25d27a6fb41f28a3a830fe78fae94',
+        key3:'c702c0d3e87142f2a528e780d52092a2',
     }
 }
 
@@ -28,14 +33,13 @@ backTopBtn.addEventListener('click', function(e){
 });
 
 // handling load more function
-const scrollListener  = function(){
+const scrollListener  = async function(){
     let htmlEl
     const loadMoreDiv = document.querySelector('.js-load-more');
     const elBounding = loadMoreDiv.getBoundingClientRect();
     const parentEl = document.querySelector('.cookbird-thumbs-out');
 
     if(elBounding.top>=0 && elBounding.left >=0 && elBounding.right <=window.innerWidth && elBounding.bottom <=window.innerHeight){
-        async function  firstFunction() {
             // extract url search
             // const locationUrl = window.location.toString().split('?')[1];
             const location = new URL(window.location);
@@ -63,13 +67,7 @@ const scrollListener  = function(){
                 htmlEl = await searchRecipes();
                 parentEl.insertAdjacentHTML('beforeend', htmlEl);
             }     
-        }
-        function secondaryFunction(){
-            firstFunction(function() {
-                console.log(`I'm done`);
-            });
-        }
-        secondaryFunction();
+
     }
     // else{
     //     console.log(`Element is NOT in viewport!`);
@@ -126,8 +124,8 @@ handleTabletChange(mediaQuery768);
 
 const searchRecipes = async function (query, offset){
     try {
-        const randomUrl = `https://api.spoonacular.com/recipes/random?number=${state.search.resultsPerPage}&apiKey=c702c0d3e87142f2a528e780d52092a2`
-        const queryUrl = `https://api.spoonacular.com/recipes/complexSearch?${query}&number=${state.search.resultsPerPage}&offset=${offset}&apiKey=c702c0d3e87142f2a528e780d52092a2`
+        const randomUrl = `https://api.spoonacular.com/recipes/random?number=${state.search.resultsPerPage}&apiKey=${state.keys.key1}`
+        const queryUrl = `https://api.spoonacular.com/recipes/complexSearch?${query}&number=${state.search.resultsPerPage}&offset=${offset}&apiKey=${state.keys.key1}`
 
         const request = await axios({
             method: 'GET',
@@ -171,7 +169,7 @@ const searchAutocomplete = async function(query){
     try {
         const request = await axios({
             method: 'GET',
-            url: `https://api.spoonacular.com/recipes/autocomplete?number=5&query=${query}&apiKey=c702c0d3e87142f2a528e780d52092a2`
+            url: `https://api.spoonacular.com/recipes/autocomplete?number=5&query=${query}&apiKey=${state.keys.key1}`
         });
         const results = request.data.map(rec=>{
             return {

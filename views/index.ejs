@@ -6,7 +6,7 @@
     <!-- LOGO -->
     <header class= "header-main">
         <div class="container">
-            <a href="/" class="logo">Logo</a>
+            <a href="/" class="logo"><img class="logo__img" src="img/bird_alone_icon.png" alt="logo-img"></a>
         </div>
     </header>
     <!-- SECTION: MAIN -->
@@ -21,10 +21,10 @@
                             <h1 class="search-bar__title"><a class=" search-bar__href" href="/">Cookbird</a></h1>
                         </div>
 
-                        <!-- Options with click and Enter submit -->
+                        <!-- search field -->
                         <form method="GET" action="/"class="form-inline col-md-9 row">
                         <div class="col-md-9 col-xs-9">
-                            <div class="form-group mx-sm-3 mb-2">
+                            <div class="form-group mb-2">
                                 <label for="search-btn" class="sr-only">Go</label>
                                 <input class="search-input form-control js-search-value" type="text" placeholder="Search" name="search" value="<%=query%>" autocomplete>
                                 <ul class="search-auto-items js-autocomplete-parent">
@@ -35,8 +35,6 @@
                             <button type="submit" class="btn btn--small btn--full">Go</button>
                         </div>
                         </form>
-
-                        <!-- TODO: Add Autocomplete -->
                     </div>
                 </div>
             </section>

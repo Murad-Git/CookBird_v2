@@ -10,7 +10,8 @@ export async function homeRoutes(req,res){
         // console.log(`data from render.js: ${data}`);
         res.render('index', {recipes: data, query: query});
     } catch (error) {
-        res.status(500).send({message: error.message});
+        res.render('error',{message: error.message});
+        // res.status(500).send({message: error.message});
     }
 }
 
@@ -23,7 +24,8 @@ export async function getRecipe(req, res){
         // console.log(`data single rec from render.js ${data}`);
         res.render('about', {recipe: data});
     } catch (error) {
-        res.status(500).send({message: error.message});
+        res.render('error',{message: error.message});
+        // res.status(500).send({message: error.message});
     }
 }
 
@@ -39,7 +41,8 @@ export async function getNutrition(req,res){
         res.render('modal', {nutritionInfo: dataNutr});
 
     } catch (error) {
-        res.status(500).send({message: error.message});
+        res.render('error',{message: error.message});
+        // res.status(500).send({message: error.message});
     }
 }
 

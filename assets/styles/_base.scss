@@ -161,6 +161,7 @@ a{
     .recipe-main{
         margin-top: 0;
     }
+
     .section-recipe{
         margin-bottom: 2rem;
     }
@@ -195,6 +196,9 @@ a{
         padding: 2rem;
         padding-top:1rem;
         border-bottom: 16px solid #f5f6f8;
+        &__servings{
+            font-size: 1.3rem;
+        }
     }
     .recipe-main__description{
         padding: 2rem;
