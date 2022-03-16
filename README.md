@@ -4,7 +4,9 @@
 * [Setup](#setup)
 
 ## General info
-Cook Bird page helps to find recipe for you. To make it easier to find appropriate dish you can naviagate by menu. Check detailed ingredient, nutrition and step-by-step preparing of each recipe and just have a fun :)
+- Cook Bird - a free recipe page for everyone.
+- Aim of the page is to find appropriate recipe for everyone. You can search by name, ingredient, cuisine, diets, intolerances.
+- You can check amount of ingredients, step-by-step instruction and full nutrition of recipes.
 	
 ## Technologies
 Project is created with:
@@ -25,6 +27,8 @@ $ cd CookBird_v2
 $ npm install
 $ npm start
 ```
+## Features
+The page uses [Spoonacular](https://spoonacular.com/food-api) API on free package plan. Therefore it has limit 150 requests per day. If you see error 429, it means you reached that limit.
 
 ## Sources
 The structure was inspired by my Spoon&Fork project, UI was inspired by [Blue Apron recipe page](https://www.blueapron.com/cookbook) page. 
