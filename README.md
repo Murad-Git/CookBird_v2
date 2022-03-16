@@ -16,6 +16,7 @@ Project is created with:
 * Bootstrap v5.1.3
 * Sass v1.49.7
 * RWD
+* Axios v0.26.0
 * REST API [Spoonacular](https://spoonacular.com/food-api)
 	
 ## Setup
