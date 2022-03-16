@@ -23,7 +23,7 @@
 
                         <!-- search field -->
                         <form method="GET" action="/"class="form-inline col-md-9 row">
-                        <div class="col-md-9 col-xs-9">
+                        <div class="col-md-9 col-xs-9 search-bar-input">
                             <div class="form-group mb-2">
                                 <label for="search-btn" class="sr-only">Go</label>
                                 <input class="search-input form-control js-search-value" type="text" placeholder="Search" name="search" value="<%=query%>" autocomplete>
@@ -31,7 +31,7 @@
                             </div>
                         </div>
                         <!-- search button -->
-                        <div class="col-md-1 col-xs-3">
+                        <div class="col-md-1 col-xs-3 search-btn">
                             <button type="submit" class="btn btn--small btn--full">Go</button>
                         </div>
                         </form>
@@ -159,7 +159,7 @@
                             </div>
                         </section>
                         <!-- SECTION: RECIPES CONTENT -->
-                        <section class="col-md-9 col-sm-12">
+                        <section class="col-md-9 col-sm-12 section-recipe">
                             <div class="row cookbird-thumbs-out">
  
                                 <%recipes.forEach(recipe=>{%>

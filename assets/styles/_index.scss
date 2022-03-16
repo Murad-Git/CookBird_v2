@@ -169,6 +169,17 @@
         }
     }
 };
+@media screen and (width:768px){
+    .search-btn, .section-recipe{
+        width:100%;
+    }
+    .search-bar-input{
+        width:100%;
+    }
+    .search-auto-items{
+        width:673px;
+    }
+}
 @media screen and (min-width: 576px) and (max-width: 768px){
     .search-auto-items{
         width:493px;
@@ -177,14 +188,28 @@
         }
     }
 };
-// @media screen and (min-width: 576px){
-//     .search-auto-items{
-//         width:473px;
-//     }
-// };
-@media screen and (max-width: 576px){
+
+@media screen and (min-width: 425px) and (max-width: 576px){
     .search-auto-items{
         width:543px;
+        .search-auto-item .search-element{
+            padding: 0.5rem;
+        }
+    }
+};
+
+@media screen and (min-width: 375px) and (max-width: 425px){
+    .search-auto-items{
+        width:483px;
+        .search-auto-item .search-element{
+            padding: 0.5rem;
+        }
+    }
+};
+
+@media screen and (max-width: 375px){
+    .search-auto-items{
+        width:503px;
         .search-auto-item .search-element{
             padding: 0.5rem;
         }

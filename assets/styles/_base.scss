@@ -70,55 +70,6 @@ a{
 
 
 // Media queries
-// @media screen and (max-width:) {
-    
-// }
-
-
-// @media screen and (min-width: 962px){
-//     // MAIN RECIPE SECTION
-//     .section-recipe{
-//         margin-top: 1.5rem;
-//         padding-right: 0;
-//         padding-left:0;
-//         padding-bottom: 5.6rem;
-//     }
-//     .section-recipe.recipe-main{
-//         margin-top: 2.5rem;
-//         padding-bottom: 5.6rem;
-//     }
-//     .section-recipe .cb-hero-image{
-//         margin-bottom: 3rem;
-
-//     }
-
-//     // INGREDIENTS SECTION
-//     .non-story{
-//         padding: 0.4rem 0;
-//         color: #0f346c;
-//     }
-//     .step-title-holder{
-//         margin-top: 1rem;
-//     }
-//     .recipeInstructions{
-//         padding: 0;
-//     }
-
-//     // RECIPE PAGE (ABOUT.HTML)
-//     .section-recipe{
-//         margin-top: 1rem;
-//         margin-bottom: 2rem;
-//     }
-
-//     .recipe-wine{
-//         margin-bottom: 2rem;
-//     }
-//     .recipe-main-container{
-//         overflow: inherit;
-
-//     }
-// }
-
 @media screen and (max-width: 768px) {
     .row{
         margin: 0;
@@ -133,13 +84,10 @@ a{
     .recipe-anchor{
         display:flex;
         flex-direction:column;
-        align-items:center;
+        align-items:flex-start;
         margin-bottom:2rem;
         figure{
             margin: 0 auto;
-        }
-        h3{
-            margin-right: 31rem;
         }
     }
     .social{
@@ -152,6 +100,9 @@ a{
     .accordion-group{
         margin-bottom:0.7rem;
         padding-top:1.4rem;
+    }
+    .accordion-inner{
+        font-size: 1.5rem;
     }
     .recipe-image{
         max-width: 45rem;
@@ -241,11 +192,29 @@ a{
         margin-bottom: 2rem;
     }
 }
+
 @media screen and (max-width:576px){
     .recipe-main-container{
         max-width: 60rem;
     }
     .contact-field{
         width: 100%;
+    }
+}
+@media screen and (max-width:425px){
+    body{
+        width: 53rem;
+    }
+    .cookbird-page{
+        padding:0;
+    }
+}
+
+@media screen and (max-width:375px){
+    body{
+        width: 55rem;
+    }
+    .cookbird-page{
+        padding:0;
     }
 }
