@@ -30,7 +30,6 @@
 import express from 'express';
 const app = express();
 import { config } from 'dotenv';
-import morgan from 'morgan';
 import bodyparser from 'body-parser';
 import { resolve } from 'path';
 import { fileURLToPath } from 'url';
@@ -40,8 +39,6 @@ import router from './server/routes/router.js'
 config({path:'config.env'});
 const PORT = process.env.PORT || 8080;
 
-// log requests
-app.use(morgan('tiny'));
 // parse request to body-parser
 app.use(bodyparser.urlencoded({extended: true}));
 // set view engine
